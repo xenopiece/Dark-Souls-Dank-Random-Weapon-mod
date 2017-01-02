@@ -4,29 +4,29 @@
 #include <regex>
 #include "Weapons_list.h"
 
-std::vector<std::string> split(const std::string& str, const std::string& delim)
-{
-	std::vector<std::string> tokens;
-	size_t prev = 0, pos = 0;
-	do
-	{
-		pos = str.find(delim, prev);
-		if (pos == std::string::npos) pos = str.length();
-		std::string token = str.substr(prev, pos - prev);
-		if (!token.empty()) tokens.push_back(token);
-		prev = pos + delim.length();
-	} while (pos < str.length() && prev < str.length());
-	return tokens;
-}
-
-bool isNumber(std::string x) {
-	std::regex e("^-?\\d+");
-	if (std::regex_match(x, e)) return true;
-	else return false;
-}
-
 namespace Utils {
-	static int Weaponsfcs()
+	std::vector<std::string> split(const std::string& str, const std::string& delim)
+	{
+		std::vector<std::string> tokens;
+		size_t prev = 0, pos = 0;
+		do
+		{
+			pos = str.find(delim, prev);
+			if (pos == std::string::npos) pos = str.length();
+			std::string token = str.substr(prev, pos - prev);
+			if (!token.empty()) tokens.push_back(token);
+			prev = pos + delim.length();
+		} while (pos < str.length() && prev < str.length());
+		return tokens;
+	}
+
+	bool isNumber(std::string x) {
+		std::regex e("^-?\\d+");
+		if (std::regex_match(x, e)) return true;
+		else return false;
+	}
+
+	int Weaponsfcs()
 	{
 		srand(clock());
 
@@ -59,6 +59,56 @@ namespace Utils {
 		return Weapon;
 	}
 
+	DWORD_PTR ResolveRelativePtr(HANDLE hHandle, DWORD_PTR Address, DWORD_PTR ofs)
+	{
+
+		if (Address)
+		{
+			Address += ofs;
+			DWORD tRead;
+			ReadProcessMemory(hHandle, (void*)(Address + 3), &tRead, sizeof(tRead), NULL); // .text:000000014000AE54                 mov     rcx, cs:142384108h
+			if (tRead) return (DWORD_PTR)(Address + tRead + sizeof(DWORD) + 3);
+		}
+		return NULL;
+	}
+
+	BOOL DataCompare(BYTE* pData, BYTE* bMask, char * szMask)
+	{
+		for (; *szMask; ++szMask, ++pData, ++bMask)
+			if (*szMask == 'x' && *pData != *bMask)
+				return FALSE;
+
+		return (*szMask == NULL);
+	}
+
+	DWORD64 FindPatternEx(HANDLE hProcess, BYTE *bMask, char *szMask, DWORD64 dwAddress, DWORD64 dwLength)
+	{
+		DWORD64 dwReturn = 0;
+		DWORD64 dwDataLength = strlen(szMask);
+		BYTE *pData = new BYTE[dwDataLength + 1];
+		SIZE_T dwRead;
+
+		for (DWORD64 i = 0; i < dwLength; i++)
+		{
+			DWORD64 dwCurAddr = dwAddress + i;
+			bool bSuccess;
+			bSuccess = ReadProcessMemory(hProcess, (LPCVOID)dwCurAddr, pData, dwDataLength, &dwRead);
+
+			if (!bSuccess || dwRead == 0)
+			{
+				continue;
+			}
+
+			if (DataCompare(pData, bMask, szMask))
+			{
+				dwReturn = dwAddress + i;
+				break;
+			}
+		}
+
+		delete[] pData;
+		return dwReturn;
+	}
 
 	__int64 GetModuleBaseAddress(LPCWSTR szProcessName, LPCWSTR szModuleName)
 	{
