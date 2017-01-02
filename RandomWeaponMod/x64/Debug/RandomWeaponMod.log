@@ -1,0 +1,4 @@
+﻿  RandomWeaponMod.cpp
+c:\users\genos\documents\visual studio 2015\projects\randomweaponmod\randomweaponmod\randomweaponmod.cpp(19): warning C4101: 'w': unreferenced local variable
+  RandomWeaponMod.vcxproj -> C:\Users\genos\Documents\Visual Studio 2015\Projects\RandomWeaponMod\x64\Debug\RandomWeaponMod.exe
+  RandomWeaponMod.vcxproj -> C:\Users\genos\Documents\Visual Studio 2015\Projects\RandomWeaponMod\x64\Debug\RandomWeaponMod.pdb (Full PDB)
