@@ -1,5 +1,5 @@
 # Dark Souls Dank Random Weapon mod
-This is Random Weapon mod for Dark Souls III<br />
+This is a Random Weapon mod for Dark Souls III<br />
 
 You can customize the timer for when it switches weapon (max 7 seconds and please dont put the timer under 0 seconds) it will destroy the mod sorta<br />
 
