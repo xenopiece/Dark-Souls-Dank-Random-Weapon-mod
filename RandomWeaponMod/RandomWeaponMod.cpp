@@ -9,6 +9,10 @@
 
 int main()
 {
+	// Init
+	SetConsoleTitle(L"DarkSoulsIII Random Weapon");
+	std::cout << "Welcome to the Dark Souls III RandomWeapon Mod by Some idiot online" << std::endl;
+
 	// Offsets
 	DWORD Base = 0x47043A8;
 	//	DWORD IBase = 0x47467A8; used for icon
@@ -43,9 +47,6 @@ int main()
 		}
 		else
 		{
-
-			std::cout << "Welcome to the Dark Souls III RandomWeapon Mod by Some idiot online" << std::endl;
-			SetConsoleTitle(L"DarkSoulsIII Random Weapon");
 			for (;;) {
 				std::cout << "How fast would you like the mod to switch weapons? max 7 seconds (0 makes it unable to load): ";
 				std::cin >> Timer;
@@ -57,6 +58,7 @@ int main()
 					break;
 				}
 			}
+
 			system("cls");
 			std::cout << "Welcome to the Dark Souls III RandomWeapon Mod by BobRoss" << std::endl << "Timer set to: " << Timer << std::endl;
 
@@ -64,17 +66,22 @@ int main()
 			BOOL chk1 = ReadProcessMemory(hprocess, (LPVOID*)(BaseAdress + Base), &RWeapon, sizeof(RWeapon), NULL);
 			BOOL chk2 = ReadProcessMemory(hprocess, (LPVOID*)(RWeapon + offset1), &RWeapon, sizeof(RWeapon), NULL);
 
+			if (!chk1 || !chk2) {
+				std::cout << "Error, failed to read process memory" << std::endl;
+				// Bad way of ending, LUUL
+				system("pause");
+				exit(0);
+			}
+
 			while (true)
 			{
-				if (chk1 && chk2) {
-					srand(clock());
+				Weapon = Utils::Weaponsfcs();
 
-					Weapon = Utils::Weaponsfcs();
+				WriteProcessMemory(hprocess, (LPVOID*)(RWeapon + offset2), &Weapon, sizeof(Weapon), NULL);
 
-					WriteProcessMemory(hprocess, (LPVOID*)(RWeapon + offset2), &Weapon, sizeof(Weapon), NULL);
-				}
 				Sleep(Timer * 1000);
 			}
+
 			system("pause");
 		}
 	}

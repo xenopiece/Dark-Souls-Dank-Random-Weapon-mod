@@ -28,6 +28,8 @@ bool isNumber(std::string x) {
 namespace Utils {
 	static int Weaponsfcs()
 	{
+		srand(clock());
+
 		int count = sizeof(WeaponList) / sizeof(WeaponList[0]);
 		int RandomWeaponIndex = rand() % count; //random number 
 
