@@ -5,54 +5,52 @@
 #include <string.h>
 #include <time.h>
 #include <cstdint>
-#include "Random Weapon.h"
-#include "GetBaseAdress.h"
-#include "GetProcessID.h"
-using namespace std;
-
+#include "Utilities.h"
 
 int main()
 {
-	GetModuleBase c;
-	ProcID P;
-	//	RandomWeapon w;
+	// Offsets
 	DWORD Base = 0x47043A8;
 	//	DWORD IBase = 0x47467A8; used for icon
 	__int64 RWeapon = 0;
 	DWORD ProcessID;
 	DWORD offset1 = 0x10;
 	DWORD offset2 = 0x330;
-	//	__int64 fuck = 0;
+
+	// Variables
 	int Weapon;
 	int Timer;
-	wchar_t* WindowName = L"Dark Souls III";
-	wchar_t* GameTittle = L"DarkSoulsIII.exe";
-	HWND WindowHandle = FindWindow(NULL, WindowName);
-	__int64 BaseAdress = c.GetModuleBaseAddress(GameTittle, GameTittle);
+
+	HWND WindowHandle = FindWindow(NULL, L"Dark Souls III");
+	__int64 BaseAdress = Utils::GetModuleBaseAddress(L"DarkSoulsIII.exe", L"DarkSoulsIII.exe");
 	if (BaseAdress == NULL)
 	{
-		cout << "i have failed baseadr ";
+		std::cout << "Failed to get baseaddress, is Dark Souls 3 running?" << std::endl;
+		// Bad way of ending, LUUL
 		system("pause");
+		exit(0);
 	}
 	else
 	{
-		ProcessID = P.FindProcessId(L"DarkSoulsIII.exe");
+		ProcessID = Utils::FindProcessId(L"DarkSoulsIII.exe");
 		HANDLE hprocess = OpenProcess(PROCESS_ALL_ACCESS, 0, ProcessID);
 		if (ProcessID == NULL)
 		{
-			cout << "I have failed";
+			std::cout << "Failed to open process, are you running this as admin?" << std::endl;
+			// Bad way of ending, LUUL
 			system("pause");
+			exit(0);
 		}
 		else
 		{
 
-			cout << "Welcome to the Dark Souls III RandomWeapon Mod by Some idiot online" << endl;
+			std::cout << "Welcome to the Dark Souls III RandomWeapon Mod by Some idiot online" << std::endl;
 			SetConsoleTitle(L"DarkSoulsIII Random Weapon");
 			for (;;) {
-				cout << "How fast would you like the mod to switch weapons? max 7 seconds (0 makes it unable to load): ";
-				cin >> Timer;
-				if (!cin && Timer > 7 && Timer > 0) {
-					cout << "error, you're hay,. retry" << endl;
+				std::cout << "How fast would you like the mod to switch weapons? max 7 seconds (0 makes it unable to load): ";
+				std::cin >> Timer;
+				if (!std::cin && Timer > 7 && Timer > 0) {
+					std::cout << "error, you're hay, retry" << std::endl;
 					continue;
 				}
 				else {
@@ -71,7 +69,7 @@ int main()
 				if (chk1 && chk2) {
 					srand(clock());
 
-					Weapon = RandomWeapon::Weaponsfcs();
+					Weapon = Utils::Weaponsfcs();
 
 					WriteProcessMemory(hprocess, (LPVOID*)(RWeapon + offset2), &Weapon, sizeof(Weapon), NULL);
 				}

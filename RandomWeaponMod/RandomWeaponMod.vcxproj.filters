@@ -18,13 +18,10 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GetBaseAdress.h">
+    <ClInclude Include="Utilities.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GetProcessID.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Random Weapon.h">
+    <ClInclude Include="Weapons_list.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -145,9 +145,8 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GetBaseAdress.h" />
-    <ClInclude Include="GetProcessID.h" />
-    <ClInclude Include="Random Weapon.h" />
+    <ClInclude Include="Utilities.h" />
+    <ClInclude Include="Weapons_list.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RandomWeaponMod.cpp" />
