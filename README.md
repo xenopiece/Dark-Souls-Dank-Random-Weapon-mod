@@ -1,7 +1,7 @@
 # Dark Souls Dank Random Weapon mod
 This is a Random Weapon mod for Dark Souls III<br />
 
-You can customize the timer for when it switches weapon (Please don't put the timer on 0 you wont be able to load the game)br />
+You can customize the timer for when it switches weapon (Please don't put the timer on 0 you wont be able to load the game)<br />
 
 The Weapon icon won't Change when the weapon changes (Update for that comming at some point<br />
 
