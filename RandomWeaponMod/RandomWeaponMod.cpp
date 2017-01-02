@@ -100,7 +100,7 @@ registerSymbol("BaseA", addr, true)
 //			system("pause");
 
 			for (;;) {
-				std::cout << "How fast would you like the mod to switch weapons? (0 makes the game unloadable, its recommended under 10 for fun): ";
+				std::cout << "How fast would you like the mod to switch weapons? (under 0 makes the code only execute once, 0 makes the game unloadable, its recommended under 10 for fun): ";
 				std::cin >> Timer;
 				if (!std::cin) {
 					std::cout << "error, your hay, retry" << std::endl;
