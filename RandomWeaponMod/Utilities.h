@@ -37,13 +37,13 @@ namespace Utils {
 		std::string cur = splitted[0];
 
 		// Check for errors
-		for (int i = 0; i < cur.length(); ++i) {
+/*		for (int i = 0; i < cur.length(); ++i) {
 			const char* current = &cur[i];
 			if (!isNumber(current)) {
 				std::cout << "Invalid character in (" << cur << ")(" << cur[i] << ")" << std::endl;
 				cur.erase(i, 1);
 			}
-		}
+		}*/
 
 		long int Weapon;
 		if (!cur.empty()) {
