@@ -77,6 +77,16 @@ int main()
 
 			// NOPE
 /*
+autoAssemble([[
+aobscanmodule(Findit,DarkSoulsIII.exe,48 8B 05 ?? ?? ?? ?? 48 85 C0 ?? ?? 48 8b 40 ?? C3)
+registersymbol(Findit)
+]])
+local addr = getAddress("Findit")
+addr = addr + readInteger(addr + 3) + 7
+unregisterSymbol("BaseA")
+registerSymbol("BaseA", addr, true)
+*/
+/*
 			DWORD_PTR addrGameContext = Utils::FindPatternEx(hprocess, (PBYTE)"\x48\x8B\x05\x00\x00\x00\x00\x48\x85\xC0\x00\x00\x48\x8b\x40\x00\xC3", "xxx????xxx??xxx?x", BaseAdress, 0x00A000000);
 			DWORD_PTR OffsetClientGameContext = 0;
 			OffsetClientGameContext = Utils::ResolveRelativePtr(hprocess, addrGameContext, 0);
