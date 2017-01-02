@@ -10,4 +10,6 @@ Download link for the compiled version here: https://mega.nz/#!nUMUxazK!4SHYRhR0
 
 Thanks to phokz and other people for making this: http://forum.cheatengine.org/viewtopic.php?t=589191 amazing cheat engine table for Dark Souls 3 which helped out alot, they all have nice shoes.<br />
 
+Video here: https://www.youtube.com/watch?v=tKMIhSzeIkk <br />
+
 PLEASE DON'T USE THIS MOD ONLINE AS IT WILL MOST LIKELY  GET YOU BANNED!!!!!!
