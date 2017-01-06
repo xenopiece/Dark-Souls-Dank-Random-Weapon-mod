@@ -17,3 +17,5 @@ VirusTotal scan link: https://www.virustotal.com/en/file/adb0f4cee1ca4a3b4aa6261
 PLEASE DON'T USE THIS MOD ONLINE AS IT WILL MOST LIKELY  GET YOU BANNED!!!!!!
 
 ALSO ITS IN SECONDS
+
+The bobross is a lie
