@@ -4,7 +4,7 @@ This is a Random Weapon mod for Dark Souls III<br />
 You can customize the timer for when it switches weapon (Please don't set the timer to 0, because you won't be able to get past the loading screen)<br />
 Only weapons and shields, no talismans, staffs, or bows.<br />
 
-The weapon icon won't change when the weapon changes (Update for that coming at some point)<br />
+The weapon icon won't change when the weapon changes (Update for that coming at some point, waiting for mr. nice shoes)<br />
 
 Download link for the compiled version here: https://mega.nz/#!mI8xiaQY!TM4NnZVnzeCfi46YNWvxIl3OfSZjGw5nFmxCePK6vwI, if you are not able to compile it yourself.<br />
 
@@ -15,3 +15,5 @@ Video here: https://www.youtube.com/watch?v=tKMIhSzeIkk <br />
 VirusTotal scan link: https://www.virustotal.com/en/file/adb0f4cee1ca4a3b4aa6261888ea1c8eacb0fda91764ed1ec35930f26dc043a9/analysis/1483666192/  (if it's needed) <br />
 
 PLEASE DON'T USE THIS MOD ONLINE AS IT WILL MOST LIKELY  GET YOU BANNED!!!!!!
+
+ALSO ITS IN SECONDS
