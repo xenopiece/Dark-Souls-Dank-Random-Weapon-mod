@@ -61,7 +61,7 @@ int main()
 		{
 
 			for (;;) {
-				std::cout << "How fast would you like the mod to switch weapons?" << std::endl;
+				std::cout << "How fast would you like the mod to switch weapons (seconds)?" << std::endl;
 				std::cout << "(under 0 makes the code only execute once, 0 makes the game unloadable, " << std::endl;
 				std::cout << "its recommended under 10 for fun): ";
 				std::cin >> Timer;
