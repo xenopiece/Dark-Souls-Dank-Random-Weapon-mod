@@ -12,4 +12,6 @@ Thanks to phokz and other people for making this: http://forum.cheatengine.org/v
 
 Video here: https://www.youtube.com/watch?v=tKMIhSzeIkk <br />
 
+VirusTotal scan link: https://www.virustotal.com/en/file/adb0f4cee1ca4a3b4aa6261888ea1c8eacb0fda91764ed1ec35930f26dc043a9/analysis/1483666192/  (if it's needed) <br />
+
 PLEASE DON'T USE THIS MOD ONLINE AS IT WILL MOST LIKELY  GET YOU BANNED!!!!!!
