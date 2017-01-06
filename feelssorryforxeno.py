@@ -6,7 +6,7 @@ output.write("std::string WeaponList[] = {")
 f = open("feelssorryforxeno.txt", "r")
 content = f.readlines()
 for ripxeno in content:
-    output.write('"' + ripxeno[:-2] + '",\n')
+    output.write('\t"' + ripxeno[:-2] + '",\n')
 f.close()
 
 output.write("}")
