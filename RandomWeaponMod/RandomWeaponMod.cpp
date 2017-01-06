@@ -1,3 +1,11 @@
+/*
+Who really looks at the source code, nepSmug
+
+TODO:
+Find baseA correctly (so we dont have to update every time)
+Also fix icon if mr. nice shoes will ever help us
+*/
+
 #include <Windows.h>
 #include <string>
 #include <iostream>
@@ -7,10 +15,20 @@
 #include <cstdint>
 #include "Utilities.h"
 
+#define REVISION 39
+
+wchar_t *convertCharArrayToLPCWSTR(const char* charArray)
+{
+	wchar_t* wString = new wchar_t[4096];
+	MultiByteToWideChar(CP_ACP, 0, charArray, -1, wString, 4096);
+	return wString;
+}
+
 int main()
 {
 	// Init
-	SetConsoleTitle(L"DarkSoulsIII Random Weapon");
+	std::string title = "DarkSoulsIII Random Weapon (revision:" + std::to_string(REVISION) + ")";
+	SetConsoleTitle(convertCharArrayToLPCWSTR(title.c_str()));
 	std::cout << "Welcome to the Dark Souls III RandomWeapon Mod by Some idiot online" << std::endl << std::endl;
 
 	// Offsets
@@ -28,9 +46,7 @@ int main()
 	if (BaseAdress == NULL)
 	{
 		std::cout << "Failed to get baseaddress, is Dark Souls 3 running?" << std::endl;
-		// Bad way of ending, LUUL
-		system("pause");
-		exit(0);
+		goto end;
 	}
 	else
 	{
@@ -39,9 +55,7 @@ int main()
 		if (ProcessID == NULL)
 		{
 			std::cout << "Failed to open process, are you running this as admin?" << std::endl;
-			// Bad way of ending, LUUL
-			system("pause");
-			exit(0);
+			goto end;
 		}
 		else
 		{
@@ -76,7 +90,11 @@ int main()
 				Sleep(Timer * 1000);
 			}
 
-			system("pause");
+			goto end;
 		}
 	}
+
+end:
+	system("pause");
+	return 1;
 }

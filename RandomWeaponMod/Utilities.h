@@ -36,14 +36,16 @@ namespace Utils {
 		std::vector<std::string> splitted = split(WeaponList[RandomWeaponIndex], " ");
 		std::string cur = splitted[0];
 
-		// Check for errors
-/*		for (int i = 0; i < cur.length(); ++i) {
+		// Check for errors, used when debugging
+#ifdef _DEBUG
+		for (int i = 0; i < cur.length(); ++i) {
 			const char* current = &cur[i];
 			if (!isNumber(current)) {
 				std::cout << "Invalid character in (" << cur << ")(" << cur[i] << ")" << std::endl;
 				cur.erase(i, 1);
 			}
-		}*/
+		}
+#endif
 
 		long int Weapon;
 		if (!cur.empty()) {
@@ -57,57 +59,6 @@ namespace Utils {
 			Weapon = 2030000;
 		}
 		return Weapon;
-	}
-
-	DWORD_PTR ResolveRelativePtr(HANDLE hHandle, DWORD_PTR Address, DWORD_PTR ofs)
-	{
-
-		if (Address)
-		{
-			Address += ofs;
-			DWORD tRead;
-			ReadProcessMemory(hHandle, (void*)(Address + 3), &tRead, sizeof(tRead), NULL); // .text:000000014000AE54                 mov     rcx, cs:142384108h
-			if (tRead) return (DWORD_PTR)(Address + tRead + sizeof(DWORD) + 3);
-		}
-		return NULL;
-	}
-
-	BOOL DataCompare(BYTE* pData, BYTE* bMask, char * szMask)
-	{
-		for (; *szMask; ++szMask, ++pData, ++bMask)
-			if (*szMask == 'x' && *pData != *bMask)
-				return FALSE;
-
-		return (*szMask == NULL);
-	}
-
-	DWORD64 FindPatternEx(HANDLE hProcess, BYTE *bMask, char *szMask, DWORD64 dwAddress, DWORD64 dwLength)
-	{
-		DWORD64 dwReturn = 0;
-		DWORD64 dwDataLength = strlen(szMask);
-		BYTE *pData = new BYTE[dwDataLength + 1];
-		SIZE_T dwRead;
-
-		for (DWORD64 i = 0; i < dwLength; i++)
-		{
-			DWORD64 dwCurAddr = dwAddress + i;
-			bool bSuccess;
-			bSuccess = ReadProcessMemory(hProcess, (LPCVOID)dwCurAddr, pData, dwDataLength, &dwRead);
-
-			if (!bSuccess || dwRead == 0)
-			{
-				continue;
-			}
-
-			if (DataCompare(pData, bMask, szMask))
-			{
-				dwReturn = dwAddress + i;
-				break;
-			}
-		}
-
-		delete[] pData;
-		return dwReturn;
 	}
 
 	__int64 GetModuleBaseAddress(LPCWSTR szProcessName, LPCWSTR szModuleName)
@@ -162,6 +113,7 @@ namespace Utils {
 		CloseHandle(hSnap);
 		return 0;
 	}
+
 	DWORD FindProcessId(const std::wstring& processName)
 	{
 		PROCESSENTRY32 processInfo;
