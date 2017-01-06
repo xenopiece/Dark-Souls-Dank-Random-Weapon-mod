@@ -2127,3 +2127,33 @@ std::string WeaponList[] = {
 	"22141400 Blessed Stone Greatshield",
 	"22141500 Hollow Stone Greatshield",
 };
+
+// 80x25
+std::vector<std::string> secretascii = {
+	"                    .~ZZZ$Z$Z7I,.       ",
+	"                  IZONDDNNNNDN88Z=.     ",
+	"                ,7ZNN8MNMMNMNMNN8Z?.    ",
+	"                7O8DMNMMMNMNNMNDDN87.   ",
+	"               $ZD8DNDD888NNMNMDNNNO.   ",
+	"               $ODDOOZ8OOODDDDNMNMN8Z.  ",
+	"               IDDD8OI7Z$7OOD8DNMNND$.. ",
+	"               ZODND7IZ8=$Z8NMDNDDDNO.  ",
+	"               $OD8D~7:?=+O$7Z8DNND8$.  ",
+	"               ~OODD~:=~=+OZ?7ZDNNNO?.  ",
+	"                7Z8O~~O:~I$ZO$Z8NN$=~   ",
+	"                 Z$Z~I$787ZDDDDDND~~.   ",
+	"                  7ZZ$Z=~?7ZDO8D?.      ",
+	"                    ZOII~7788DM++?..    ",
+	".                    7+I77$Z7Z???+?.    ",
+	"?I77...             .,,7D8O7?+++7??+=.  ",
+	"II777II: .I=.       ::~=??,~~~:Z~~==+?. ",
+	"$$$I$77ID==M=??.     ::=~:::::,::~~=+++.",
+	".,ZO?IOIDD=+N+?.     ,,,++:::,::::~=+++.",
+	"    $$DOO7?=?I:.     ,?=?=,:~,.,,:+~?++.",
+	"           =+I?$88DDD~~:,,,:,:,+,:=,++?.",
+	"           ???$77$ZZ.,,,,,,,+,=,,,:=++?.",
+	"            .??I7+:,,,,,,,,,,~,,,:~+?+?.",
+	"              .I7I$,:,,,,,:~,:,,,,~+?++.",
+	"                ?I,,,,,,,~,,,,,:,,~+?++,",
+	"                 ................,.....",
+};
