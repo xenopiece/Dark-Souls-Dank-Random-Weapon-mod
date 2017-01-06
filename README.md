@@ -6,9 +6,9 @@ Only weapons and shields, no talismans, staffs, or bows.<br />
 
 The weapon icon won't change when the weapon changes (Update for that coming at some point)<br />
 
-Download link for the compiled version here: https://mega.nz/#!nUMUxazK!4SHYRhR0YCMytCpYxZKD-PNZNu_89jA4lvXgp14be1k, if you are not able to compile it yourself.<br />
+Download link for the compiled version here: https://mega.nz/#!mI8xiaQY!TM4NnZVnzeCfi46YNWvxIl3OfSZjGw5nFmxCePK6vwI, if you are not able to compile it yourself.<br />
 
-Thanks to phokz and other people for making this: http://forum.cheatengine.org/viewtopic.php?t=589191 amazing cheat engine table for Dark Souls 3 which helped out alot, they all have nice shoes.<br />
+Thanks to phokz and other people for making this: https://mega.nz/#!mI8xiaQY!TM4NnZVnzeCfi46YNWvxIl3OfSZjGw5nFmxCePK6vwI amazing cheat engine table for Dark Souls 3 which helped out alot, they all have nice shoes.<br />
 
 Video here: https://www.youtube.com/watch?v=tKMIhSzeIkk <br />
 
