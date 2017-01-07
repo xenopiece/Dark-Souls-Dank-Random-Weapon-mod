@@ -65,8 +65,12 @@ int main()
 				std::cout << "(under 0 makes the code only execute once, 0 makes the game unloadable, " << std::endl;
 				std::cout << "its recommended under 10 for fun): ";
 				std::cin >> Timer;
-				if (!std::cin) {
+				if (std::cin.fail()) {
+					std::cin.clear();
+					std::cin.ignore(INT_MAX, '\n');
 					std::cout << "error, your hay, retry" << std::endl;
+					Sleep(1000);
+					system("cls");
 					continue;
 				}
 				else {
@@ -81,7 +85,7 @@ int main()
 			ReadProcessMemory(hprocess, (LPVOID*)(BaseAdress + BaseA), &RWeapon, sizeof(RWeapon), NULL);
 			ReadProcessMemory(hprocess, (LPVOID*)(RWeapon + primaryrightweb_offset1), &RWeapon, sizeof(RWeapon), NULL);
 
-			if (Timer == 0) { // How deer u disobey us
+			if (Timer == 0 || Timer < 0) { // How deer u disobey us
 				system("cls");
 				SetConsoleTitle(L"No mistakes, only happy little accidents");
 
