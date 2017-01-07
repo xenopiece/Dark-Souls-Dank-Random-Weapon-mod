@@ -2156,4 +2156,6 @@ std::vector<std::string> secretascii = {
 	"              .I7I$,:,,,,,:~,:,,,,~+?++.",
 	"                ?I,,,,,,,~,,,,,:,,~+?++,",
 	"                 ................,.....",
+	"	can't i leave you alone for five minuts? ",
+	"		Just look at this mess...",
 };
