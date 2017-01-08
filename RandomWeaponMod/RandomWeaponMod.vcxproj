@@ -145,6 +145,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="testerino.h" />
     <ClInclude Include="Utilities.h" />
     <ClInclude Include="Weapons_list.h" />
   </ItemGroup>

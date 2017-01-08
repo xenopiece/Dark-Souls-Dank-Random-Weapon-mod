@@ -2,6 +2,8 @@
 
 #include <vector>
 #include <regex>
+#include <iostream>
+#include <fstream>
 #include "Weapons_list.h"
 
 namespace Utils {
@@ -24,6 +26,46 @@ namespace Utils {
 		std::regex e("^-?\\d+");
 		if (std::regex_match(x, e)) return true;
 		else return false;
+	}
+
+	/*
+	input: 48 8B 05 ?? ?? ?? ?? 48 85 C0 ?? ?? 48 8b 40 ?? C3
+	output:
+	\x48\x8B\x05\x00\x00\x00\x00\x48\x85\xC0\x00\x00\x48\x8b\x40\x00\xC3
+	xxx????xxx??xxx?x
+	*/
+	std::vector<std::string> ConvertSignature(std::string unformattedsig)
+	{
+		std::vector<std::string> sig = split(unformattedsig, " ");
+
+		std::string signature;
+		std::string mask;
+
+		for (int i = 0; i < sig.size(); i++) {
+			std::string cur;
+			if (sig[i] == "??") { cur = "00"; }
+			else { cur = sig[i]; }
+			signature = signature + "\\" + "x" + cur;
+		}
+
+		for (int i = 0; i < sig.size(); i++) {
+			std::string cur;
+			if (sig[i] == "??") { cur = "?"; }
+			else { cur = "x"; }
+			mask = mask + cur;
+		}
+
+#ifdef _DEBUG
+		std::ofstream myfile;
+		myfile.open("convertsig.txt");
+		myfile << unformattedsig << "\n";
+		myfile << signature << "\n";
+		myfile << mask << "\n";
+		myfile << "\n";
+		myfile.close();
+#endif
+
+		return std::vector<std::string>{signature, mask};
 	}
 
 	int Weaponsfcs()

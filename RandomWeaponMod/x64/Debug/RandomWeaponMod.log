@@ -1,0 +1,5 @@
+﻿  RandomWeaponMod.cpp
+c:\users\niller\documents\github\dark-souls-dank-random-weapon-mod\randomweaponmod\testerino.h(40): warning C4244: 'argument': conversion from 'uintptr_t' to 'DWORD', possible loss of data
+c:\users\niller\documents\github\dark-souls-dank-random-weapon-mod\randomweaponmod\testerino.h(112): warning C4244: 'argument': conversion from 'SIZE_T' to 'unsigned int', possible loss of data
+  RandomWeaponMod.vcxproj -> C:\Users\Niller\Documents\GitHub\Dark-Souls-Dank-Random-Weapon-mod\x64\Debug\RandomWeaponMod.exe
+  RandomWeaponMod.vcxproj -> C:\Users\Niller\Documents\GitHub\Dark-Souls-Dank-Random-Weapon-mod\x64\Debug\RandomWeaponMod.pdb (Full PDB)

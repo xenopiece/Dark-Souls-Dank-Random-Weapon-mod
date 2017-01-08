@@ -15,6 +15,10 @@ Also fix icon if mr. nice shoes will ever help us
 #include <cstdint>
 #include "Utilities.h"
 
+#ifdef _DEBUG
+#include "testerino.h"
+#endif
+
 #define REVISION 39
 
 wchar_t *convertCharArrayToLPCWSTR(const char* charArray)
@@ -24,8 +28,26 @@ wchar_t *convertCharArrayToLPCWSTR(const char* charArray)
 	return wString;
 }
 
+DWORD64 ResolveRelativePtr(HANDLE hHandle, DWORD_PTR Address, DWORD_PTR ofs)
+{
+
+	if (Address)
+	{
+		Address += ofs;
+		DWORD tRead;
+		ReadProcessMemory(hHandle, (void*)(Address + 3), &tRead, sizeof(tRead), NULL); // .text:000000014000AE54                 mov     rcx, cs:142384108h
+		if (tRead) return (DWORD_PTR)(Address + tRead + sizeof(DWORD) + 3);
+	}
+	return NULL;
+}
+
 int main()
 {
+	// When testing
+#ifdef _DEBUG
+	testerino();
+#endif
+
 	// Init
 	std::string title = "DarkSoulsIII Random Weapon (revision:" + std::to_string(REVISION) + ")";
 	SetConsoleTitle(convertCharArrayToLPCWSTR(title.c_str()));

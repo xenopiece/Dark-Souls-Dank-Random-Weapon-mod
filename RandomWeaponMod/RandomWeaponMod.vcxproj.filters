@@ -24,6 +24,9 @@
     <ClInclude Include="Weapons_list.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="testerino.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RandomWeaponMod.cpp">
