@@ -114,7 +114,7 @@ int main()
 				HWND console = GetConsoleWindow();
 				RECT r;
 				GetWindowRect(console, &r); //stores the console's current dimensions
-				MoveWindow(console, r.left, r.top, 400, 400, TRUE);
+				MoveWindow(console, r.left, r.top, 450, 420, TRUE);
 
 				// This wont actually work, nepSmug
 				EnableScrollBar(console, SB_BOTH, ESB_DISABLE_BOTH);
