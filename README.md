@@ -11,6 +11,8 @@ Download link for the compiled version here: https://mega.nz/#!eIFGSaZR!5aNHVbUL
 Download link per request from reddit user "Blargh676" it has less infused weapons and shields (Weapons and Sheilds have less infusions): https://mega.nz/#!GEl0kL4B!syTEg6YKkYK67Qu2-nbKM1gvvFGlny-03gIgCfVJTTg. <br />
 <br />Thanks to phokz and other people for making this: http://forum.cheatengine.org/viewtopic.php?t=589191 amazing cheat engine table for Dark Souls 3 which helped out alot, they all have nice shoes. <br />
 
+Download link per request from a viewer of LobosJR's chat, it has no shields https://mega.nz/#!lJoDAYRZ!5Yknf8KHLB5mWEMuLgir39TylL25NMIztoeU_batt7Y<br />
+
 Video here: https://www.youtube.com/watch?v=tKMIhSzeIkk <br />
 
 VirusTotal scan link: https://www.virustotal.com/en/file/adb0f4cee1ca4a3b4aa6261888ea1c8eacb0fda91764ed1ec35930f26dc043a9/analysis/1483666192/  (if it's needed) <br />
