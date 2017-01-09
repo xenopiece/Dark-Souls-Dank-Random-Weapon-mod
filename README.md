@@ -8,7 +8,7 @@ Weapons have random infusion and upgrade level.<br />
 
 The weapon icon won't change when the weapon changes (Update for that coming at some point, waiting for mr. nice shoes)<br />
 
-normal version only contains Weapons and there infusions (no shields, talisman, staff, or bows): https://mega.nz/#!CUU31J6Y!-Fk1jziTFq8GWv7Zo6ATTtU89N_Fdh7K3rq6W3Hh8NY<br />
+normal version only contains Weapons and there infusions (no shields, talisman, staff, or bows): https://mega.nz/#!LJ1CgIxY!9JeTr29fRA5vkolFmCIUa-th_s_s5JMu5IBjt-EeH6M<br />
 
 
 Shield and Weapon Version only has shields and Weapons and their infusions (no talisman, staff, or bows): https://mega.nz/#!UAZAgQhZ!24SmOW62bb-ppzsoEfCo5rhEjjOTAF51c4O-AHcvuu4<br />
