@@ -10,9 +10,6 @@ The weapon icon won't change when the weapon changes (Update for that coming at 
 
 normal version only contains Weapons and there infusions (no shields, talisman, staff, or bows): https://mega.nz/#!LJ1CgIxY!9JeTr29fRA5vkolFmCIUa-th_s_s5JMu5IBjt-EeH6M<br />
 
-
-Shield and Weapon Version only has shields and Weapons and their infusions (no talisman, staff, or bows): https://mega.nz/#!UAZAgQhZ!24SmOW62bb-ppzsoEfCo5rhEjjOTAF51c4O-AHcvuu4<br />
-
 Download link per request from reddit user "Blargh676" removed almost all of the shields and their infsuions, Same Weapons but they have less infusions. https://mega.nz/#!7EMXlSra!uKoYRf2YolUq85nYai5aZrS1r11fzhs6JgesVCJA0h0 .<br />
 
 <br />Thanks to phokz and other people for making this: http://forum.cheatengine.org/viewtopic.php?t=589191 amazing cheat engine table for Dark Souls 3 which helped out alot, they all have nice shoes. <br />
