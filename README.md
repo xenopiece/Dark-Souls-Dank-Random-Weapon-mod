@@ -10,7 +10,7 @@ The weapon icon won't change when the weapon changes (Update for that coming at 
 
 Download link, normal version: https://mega.nz/#!UAZAgQhZ!24SmOW62bb-ppzsoEfCo5rhEjjOTAF51c4O-AHcvuu4<br />
 
-Download link, no shields: https://mega.nz/#!cBgU0CqC!zhzFKsEwpxmCYN1NrEsOsKg9hIAWdNCQaOp9FseDw1M<br />
+Download link, this version has no shields except for Bonewheel Shield: https://mega.nz/#!qZtygDAR!qKQybv-jgf1zIJJ3jZF1HEkQNp6HSh65Gjp6LVdnZ9Y<br />
 
 Download link per request from reddit user "Blargh676" it has less infused weapons and shields (Weapons and Sheilds have less infusions): https://mega.nz/#!GEl0kL4B!syTEg6YKkYK67Qu2-nbKM1gvvFGlny-03gIgCfVJTTg. <br />
 
