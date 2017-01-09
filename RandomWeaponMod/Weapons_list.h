@@ -2131,6 +2131,18 @@ std::string WeaponList[] = {
 	"22141400 Blessed Stone Greatshield",
 	"22141500 Hollow Stone Greatshield",
 #endif
+	// DLC weapons
+	"2240000 Onyx Blade",
+	"4120000 Follower Sabre",
+	"7170000 Millwood Battle Axe",
+	"7180000 Earth Seeker",
+	"8310000 Quakestone Hammer",
+	"9230000 Follower Javelin",
+	"10180000 Friede's Great Scythe",
+	"11050000 Crow Talons",
+	"12070000 Rose of Ariandel",
+	"16140000 Valorheart",
+	"16150000 Crow Quills",
 };
 
 // 80x25

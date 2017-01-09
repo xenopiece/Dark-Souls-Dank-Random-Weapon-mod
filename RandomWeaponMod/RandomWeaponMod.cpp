@@ -19,7 +19,7 @@ Also fix icon if mr. nice shoes will ever help us
 #include "testerino.h"
 #endif
 
-#define REVISION 39
+#define REVISION 40
 
 wchar_t *convertCharArrayToLPCWSTR(const char* charArray)
 {
