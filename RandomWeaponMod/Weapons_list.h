@@ -1,4 +1,7 @@
 #pragma once
+
+//#define NO_SHIELDS
+
 // Our weapons list
 std::string WeaponList[] = {
 	"110000 Fists",
@@ -1468,6 +1471,7 @@ std::string WeaponList[] = {
 	"16131300 Raw Drang Hammers",
 	"16131400 Blessed Drang Hamme",
 	"16131500 Hollow Drang Hammers",
+#if !defined(NO_SHIELDS)
 	"20000000 Buckler",
 	"20000100 Heavy Buc",
 	"20000200 Sharp Buckl",
@@ -2126,6 +2130,7 @@ std::string WeaponList[] = {
 	"22141300 Raw Stone Greatshield",
 	"22141400 Blessed Stone Greatshield",
 	"22141500 Hollow Stone Greatshield",
+#endif
 };
 
 // 80x25
