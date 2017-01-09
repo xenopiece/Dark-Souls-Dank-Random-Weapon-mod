@@ -114,7 +114,7 @@ int main()
 				HWND console = GetConsoleWindow();
 				RECT r;
 				GetWindowRect(console, &r); //stores the console's current dimensions
-				MoveWindow(console, r.left, r.top, 450, 420, TRUE);
+				MoveWindow(console, r.left, r.top, 400, 400, TRUE);
 
 				// This wont actually work, nepSmug
 				EnableScrollBar(console, SB_BOTH, ESB_DISABLE_BOTH);
@@ -123,17 +123,19 @@ int main()
 					std::cout << secretascii[i].c_str() << std::endl;
 				}
 			}
-
-			while (true)
+			else
 			{
-				Weapon = Utils::Weaponsfcs();
+				while (true)
+				{
+					Weapon = Utils::Weaponsfcs();
 
-				WriteProcessMemory(hprocess, (LPVOID*)(RWeapon + primaryrightweb_offset2), &Weapon, sizeof(Weapon), NULL);
+					WriteProcessMemory(hprocess, (LPVOID*)(RWeapon + primaryrightweb_offset2), &Weapon, sizeof(Weapon), NULL);
 
-				Sleep(Timer * 1000);
+					Sleep(Timer * 1000);
+				}
+
+				goto end;
 			}
-
-			goto end;
 		}
 	}
 
