@@ -6,11 +6,11 @@ Only weapons and shields, no talismans, staffs, or bows.<br />
 
 The weapon icon won't change when the weapon changes (Update for that coming at some point, waiting for mr. nice shoes)<br />
 
-Download link for the compiled version here: https://mega.nz/#!eIFGSaZR!5aNHVbULnFvXH2MwK8k-JPCi6hT7l82XtjvZ1ZLVNu0, if you are not able to compile it yourself.<br />
+Download link, normal version: https://mega.nz/#!UAZAgQhZ!24SmOW62bb-ppzsoEfCo5rhEjjOTAF51c4O-AHcvuu4<br />
+
+Download link, no shields: https://mega.nz/#!cBgU0CqC!zhzFKsEwpxmCYN1NrEsOsKg9hIAWdNCQaOp9FseDw1M<br />
 
 Download link per request from reddit user "Blargh676" it has less infused weapons and shields (Weapons and Sheilds have less infusions): https://mega.nz/#!GEl0kL4B!syTEg6YKkYK67Qu2-nbKM1gvvFGlny-03gIgCfVJTTg. <br />
-
-Download link per request from a viewer of LobosJR's chat, it has no shields https://mega.nz/#!lJoDAYRZ!5Yknf8KHLB5mWEMuLgir39TylL25NMIztoeU_batt7Y<br />
 
 <br />Thanks to phokz and other people for making this: http://forum.cheatengine.org/viewtopic.php?t=589191 amazing cheat engine table for Dark Souls 3 which helped out alot, they all have nice shoes. <br />
 
