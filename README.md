@@ -8,7 +8,7 @@ Weapons have random infusion and upgrade level.<br />
 
 The weapon icon won't change when the weapon changes (Update for that coming at some point, waiting for mr. nice shoes)<br />
 
-normal version only contains Weapons you can toggle Shields on and off in this version: https://mega.nz/#!vI1nEa4Y!VhuN_LYEbinvEduLyk2fIVbp_iXwbWTc2X6-PaMcGi4 <br />
+normal version only contains Weapons you can toggle Shields on and off in this version: https://mega.nz/#!DUUCnIwB!RAkGbD4Or_3rSnR8_6YCByFh0vWi_Zgc2-i6HQcgI2w <br />
 
 Download link per request from reddit user "Blargh676" removed almost all of the shields and their infsuions, Same Weapons but they have less infusions. https://mega.nz/#!7EMXlSra!uKoYRf2YolUq85nYai5aZrS1r11fzhs6JgesVCJA0h0 .<br />
 
