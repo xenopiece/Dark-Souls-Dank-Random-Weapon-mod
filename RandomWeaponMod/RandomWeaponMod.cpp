@@ -81,14 +81,31 @@ int main()
 		}
 		else
 		{
+			bool NIGHTMAREMODESHIELDS;
+			for (;;) {
+				std::cout << "WOULD YOU LIKE FUCKING SHIELDSSSSSSIISISAIASJIAUIAWU(AWU(AW(" << std::endl;
+				std::cout << "(you would have a close to 50% chance of getting a shield)" << std::endl;
+				std::cout << "(0 for false, 1 for true): ";
+				std::cin.clear();
+				std::cin >> NIGHTMAREMODESHIELDS;
+				if (std::cin.fail()) {
+					std::cout << "error, your hay, retry" << std::endl;
+					Sleep(1000);
+					system("cls");
+					continue;
+				}
+			}
+			if (NIGHTMAREMODESHIELDS) {
+				Utils::EnableShields();
+			}
 
 			for (;;) {
 				std::cout << "How fast would you like the mod to switch weapons (seconds)?" << std::endl;
 				std::cout << "(under 0 makes the code only execute once, 0 makes the game unloadable, " << std::endl;
 				std::cout << "its recommended under 10 for fun): ";
+				std::cin.clear();
 				std::cin >> Timer;
 				if (std::cin.fail()) {
-					std::cin.clear();
 					std::cin.ignore(INT_MAX, '\n');
 					std::cout << "error, your hay, retry" << std::endl;
 					Sleep(1000);

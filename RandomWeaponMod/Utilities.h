@@ -68,11 +68,21 @@ namespace Utils {
 		return std::vector<std::string>{signature, mask};
 	}
 
+
+	// Note 2 self, this should be done differently
+	void EnableShields()
+	{
+		for (int i = 0; i < shields_weaponslist.size(); i++) {
+			std::string cur = shields_weaponslist[i];
+			weaponlist.push_back(cur);
+		}
+	}
+
 	int Weaponsfcs()
 	{
 		srand(clock());
 
-		int count = sizeof(weaponlist) / sizeof(weaponlist[0]);
+		int count = static_cast<int>(weaponlist.size());//old style: sizeof(weaponlist) / sizeof(weaponlist[0]);
 		int RandomWeaponIndex = rand() % count; //random number 
 		bool isbossweapon = false;
 
