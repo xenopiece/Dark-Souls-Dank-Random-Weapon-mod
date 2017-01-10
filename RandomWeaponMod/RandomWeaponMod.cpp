@@ -83,7 +83,7 @@ int main()
 		{
 			bool NIGHTMAREMODESHIELDS;
 			for (;;) {
-				std::cout << "WOULD YOU LIKE FUCKING SHIELDSSSSSSIISISAIASJIAUIAWU(AWU(AW(" << std::endl;
+				std::cout << "Good sire, would you like to add shields to your artillery?" << std::endl;
 				std::cout << "(you would have a close to 50% chance of getting a shield)" << std::endl;
 				std::cout << "(0 for false, 1 for true): ";
 				std::cin.clear();
