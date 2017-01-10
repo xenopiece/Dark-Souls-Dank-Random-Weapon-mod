@@ -72,11 +72,16 @@ namespace Utils {
 	{
 		srand(clock());
 
-		int count = sizeof(WeaponList) / sizeof(WeaponList[0]);
+		int count = sizeof(weaponlist) / sizeof(weaponlist[0]);
 		int RandomWeaponIndex = rand() % count; //random number 
+		bool isbossweapon = false;
 
-		std::vector<std::string> splitted = split(WeaponList[RandomWeaponIndex], " ");
-		std::string cur = splitted[0];
+		std::string cur = split(weaponlist[RandomWeaponIndex], " ")[0];
+
+		for (int i = 0; i < boss_weaponlist.size(); i++) { // Check all boss weapons, we should really just do 2 seperat lists, but meh, this is easier
+			std::string curwpn = split(boss_weaponlist[i], " ")[0];
+			if (cur == curwpn) { isbossweapon = true; }
+		}
 
 		// Check for errors, used when debugging
 #ifdef _DEBUG
@@ -93,7 +98,12 @@ namespace Utils {
 		if (!cur.empty()) {
 			Weapon = stoi(cur);
 
-			int UpgradeLvl = rand() % 10;
+			int UpgradeLvl;
+			if (isbossweapon) {
+				UpgradeLvl = rand() % 5;
+			} else {
+				UpgradeLvl = rand() % 10;
+			}
 			Weapon = Weapon + UpgradeLvl;
 		}
 		else {

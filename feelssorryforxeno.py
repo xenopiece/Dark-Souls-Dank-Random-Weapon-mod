@@ -1,7 +1,7 @@
 #He did it manually before, rip xenorino in pepperino
 
 output = open("feelssorryforxeno_done.txt", 'w+')
-output.write("std::string WeaponList[] = {")
+output.write("std::vector<std::string> WeaponList = {")
 
 f = open("feelssorryforxeno.txt", "r")
 content = f.readlines()
