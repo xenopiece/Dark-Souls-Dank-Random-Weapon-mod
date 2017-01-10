@@ -81,21 +81,22 @@ int main()
 		}
 		else
 		{
-			bool NIGHTMAREMODESHIELDS;
+			int NIGHTMAREMODESHIELDS;
 			for (;;) {
 				std::cout << "Good sire, would you like to add shields to your artillery?" << std::endl;
 				std::cout << "(you would have a close to 50% chance of getting a shield)" << std::endl;
 				std::cout << "(0 for false, 1 for true): ";
 				std::cin.clear();
 				std::cin >> NIGHTMAREMODESHIELDS;
-				if (std::cin.fail()) {
+				if (std::cin.fail() || NIGHTMAREMODESHIELDS < 0 || NIGHTMAREMODESHIELDS > 1 ) {
+					std::cin.ignore(INT_MAX, '\n');
 					std::cout << "error, your hay, retry" << std::endl;
 					Sleep(1000);
 					system("cls");
 					continue;
 				}
 			}
-			if (NIGHTMAREMODESHIELDS) {
+			if (NIGHTMAREMODESHIELDS == 1) {
 				Utils::EnableShields();
 			}
 
