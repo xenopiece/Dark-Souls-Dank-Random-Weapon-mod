@@ -1558,6 +1558,81 @@ std::vector<std::string> boss_weaponlist = {
 	"6180000 Profaned Greatsword",
 	"6260000 Lorian's Greatsword",
 	"6200000 Farron Greatsword",
+	"4070000 Pontiff Knight Curved Sword",
+	"6350000 Fume Ultra Greatswor",
+	"6130000 Black Knight Greatsword",
+	"12040000 Witch's Locks",
+	"8310000 Quakestone Hamme",
+	"16140000 Valorhear",
+	"8260000 Dragon Toot",
+	"6370000 Storm Rule",
+	"6250000 Black Knight Sword",
+	"10150000 Black Knight Glaive",
+	"10160000 Immolation Tinder",
+	"8220000 Heysel Pic",
+	"5040000 Bloodlust",
+	"5050000 Darkdrif",
+	"5020000 Chaos Blad",
+	"10070000 Pontiff Knight Great Scythe",
+	"9190000 Yorshka's Spea",
+	"9130000 Tailbone Spea",
+	"13120000 Golden Ritual Spea",
+	"9220000 Dragonslayer Spear",
+	"8170000 Gargoyle Flame Hammer",
+	"8290000 Morne's Great Hamme",
+	"8270000 Smough's Great Hamme",
+	"2140000 Irithyll Straight Sword",
+	"2180000 Morion Blade",
+	"2110000 Sunlight Straight Swor",
+	"2230000 Anri's Straight Sword",
+	"3050000 Irithyll Rapie",
+	"10050000 Black Knight Greatax",
+	"11040000 Dark Hand",
+	"6360000 Old Wolf Curved Sword",
+	"7130000 Eleonora",
+	"12070000 Rose of Ariande",
+	"10180000 Friede's Great Scyth",
+	"7180000 Earth Seeke",
+	"4100000 Crescent Moon Sword",
+	"6340000 Firelink Greatsword",
+	"6170000 Greatsword of Judgment",
+	"6310000 Hollowslayer Greatswor",
+	"6320000 Moonlight Greatswor",
+	"6270000 Twin Princes' Greatswor",
+	"6300000 Wolf Knight's Greatswor",
+	"6290000 Wolnir's Holy Swor",
+	"10100000 Gundyr's Halberd ",
+	"9170000 Arstor's Spear",
+	"9160000 Dragonslayer Swordspear",
+	"8190000 Old King's Great Hammer",
+	"8180000 Vordt's Great Hammer",
+	"6280000 Lothric's Holy Sword",
+	"3040000 Crystal Sage's Rapie",
+	"6230000 Yhorm's Great Machete",
+	"7110000 Dragonslayer Greataxe",
+	"7120000 Demon's Greataxe",
+	"11030000 Demon's Fis",
+	"1080000 Tailbone Short Sword",
+	"4080000 Storm Curved Sword",
+	"16040000 Dancer's Enchanted Swords",
+	"6180000 Profaned Greatsword",
+	"6260000 Lorian's Greatsword",
+	"6200000 Farron Greatsword",
+	"22090000 Wolf Knight's Greatshield"
+	"20150000 Havel's Greatshiel"
+	"2050000 Moaning Shield"
+	"22110000 Greatshield of Glory loo"
+	"20290000 Ancient Dragon Greatshield"
+	"21260000 Spirit Tree Crest Shield"
+	"21060000 Pontiff Knight Shield look"
+	"21120000 Silver Knight Shield loo"
+	"21220000 Golden Wing Crest Shield  loo"
+	"21180000 Dragon Crest Shield"
+	"21100000 Black Knight Shield"
+	"22070000 Yhorm's Greatshield"
+	"22040000 Dragonslayer Greatshield"
+	"22120000 Curse Ward Greatshield"
+	"21280000 Shield of Want"
 };
 
 std::vector<std::string> shields_weaponslist = {
