@@ -1,7 +1,7 @@
 # Dark Souls Dank Random Weapon mod
 This is a Random Weapon mod for Dark Souls III<br />
 
-You can customize the timer for when it switches weapon (Please don't set the timer to 0, because you won't be able to get past the loading screen)<br />
+You can customize the timer (in seconds) for when it switches weapon (Please don't set the timer to 0, because you won't be able to get past the loading screen)<br />
 
 
 Weapons have random infusion and upgrade level.<br />
@@ -19,7 +19,5 @@ Video here: https://www.youtube.com/watch?v=tKMIhSzeIkk <br />
 VirusTotal scan link: https://www.virustotal.com/en/file/adb0f4cee1ca4a3b4aa6261888ea1c8eacb0fda91764ed1ec35930f26dc043a9/analysis/1483666192/  (if it's needed) <br />
 
 PLEASE DON'T USE THIS MOD ONLINE AS IT WILL MOST LIKELY  GET YOU BANNED!!!!!!
-
-ALSO ITS IN SECONDS
 
 The bobross is a lie
