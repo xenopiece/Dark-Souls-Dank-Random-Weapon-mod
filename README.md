@@ -25,5 +25,3 @@ PLEASE DON'T USE THIS MOD ONLINE AS IT WILL MOST LIKELY  GET YOU BANNED!!!!!!<br
 THX TO NILLER303 FOR HELPING OUT WITH THIS MOD HE ALSO HAS NICE SHOES!!!!!<br />
 
 The bobross is a lie
-
-ACOG_Muffin is a parry spammer jk we like you NIller303 is the real parry spammer nepSmug
