@@ -6,8 +6,6 @@ this mod has no Talismans, Bows, Staffs, or Chimes.<br />
 
 Weapons have random infusion and upgrade level.<br />
 
-Lobos when ever you come to yhorm or get "stuck" on other boss you should probaly download the new source code since it fixes some low damage Weapons and lets you disable the shields if you dont want them but be Aware you need to change the timer <br />
-
 The weapon icon won't change when the weapon changes (Update for that coming at some point, waiting for mr. nice shoes)<br />
 
 normal version only contains Weapons you can toggle Shields on and off in this version: https://mega.nz/#!DUUCnIwB!RAkGbD4Or_3rSnR8_6YCByFh0vWi_Zgc2-i6HQcgI2w <br />
