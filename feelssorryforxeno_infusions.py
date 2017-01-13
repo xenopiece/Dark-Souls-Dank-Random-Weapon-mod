@@ -3,7 +3,7 @@
 output = open("feelssorryforxeno_infusions_done.txt", 'w+')
 output.write("std::vector<std::string> WeaponListInfusions = {\n")
 
-f = open("feelssorryforxeno_infusions.txt", "r")
+f = open("feelssorryforxeno.txt", "r")
 content = f.readlines()
 for ripxeno in content:
 	if (ripxeno.find("Sharp") != -1):
