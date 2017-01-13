@@ -1,14 +1,13 @@
 # Dark Souls Dank Random Weapon mod
 This is a Random Weapon mod for Dark Souls III<br />
 
-You can customize the timer (in seconds) for when it switches weapon (Please don't set the timer to 0, because you won't be able to get past the loading screen)<br />
-this mod has no Talismans, Bows, Staffs, or Chimes.<br />
+Download Link (GUI Version): https://mega.nz/#!WUFDXI5a!MWXsX0dBILO1lCajNBxbhFRAMfpa0GeVJ5N-LlnMTx8
 
-Weapons have random infusion and upgrade level.<br />
+You can customize the timer (in seconds) for when it switches weapon<br />
+
+Weapons have random upgrade level.<br />
 
 The weapon icon won't change when the weapon changes (Update for that coming at some point, waiting for mr. nice shoes)<br />
-
-Download Link: https://mega.nz/#!WUFDXI5a!MWXsX0dBILO1lCajNBxbhFRAMfpa0GeVJ5N-LlnMTx8
 
 <br />Thanks to phokz and other people for making this: http://forum.cheatengine.org/viewtopic.php?t=589191 amazing cheat engine table for Dark Souls 3 which helped out alot, they all have nice shoes. <br />
 
