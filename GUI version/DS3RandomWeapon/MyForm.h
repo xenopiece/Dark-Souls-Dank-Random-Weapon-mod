@@ -36,10 +36,11 @@ namespace DS3RandomWeapon {
 			}
 		}
 	private: System::Windows::Forms::Button^  button1;
-	protected:
+//	public:
 	private: System::Windows::Forms::CheckedListBox^  checkedListBox1;
 	private: System::Windows::Forms::Label^  label1;
 	private: System::Windows::Forms::TextBox^  textBox1;
+	public: System::Windows::Forms::Label^  label2;
 
 	private:
 		/// <summary>
@@ -58,15 +59,16 @@ namespace DS3RandomWeapon {
 			this->checkedListBox1 = (gcnew System::Windows::Forms::CheckedListBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(249, 38);
+			this->button1->Location = System::Drawing::Point(249, 61);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(182, 428);
+			this->button1->Size = System::Drawing::Size(182, 405);
 			this->button1->TabIndex = 0;
-			this->button1->Text = L"Begin";
+			this->button1->Text = L"Start";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
@@ -86,27 +88,38 @@ namespace DS3RandomWeapon {
 			// 
 			// label1
 			// 
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(307, 12);
+			this->label1->Location = System::Drawing::Point(250, 12);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(124, 23);
+			this->label1->Size = System::Drawing::Size(128, 23);
 			this->label1->TabIndex = 3;
 			this->label1->Text = L"Timer (seconds)";
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(249, 12);
+			this->textBox1->Location = System::Drawing::Point(375, 13);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(56, 20);
 			this->textBox1->TabIndex = 4;
 			this->textBox1->KeyPress += gcnew KeyPressEventHandler(this, &MyForm::textBox1_KeyPress);
+			// 
+			// label2
+			// 
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label2->Location = System::Drawing::Point(249, 35);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(182, 23);
+			this->label2->TabIndex = 5;
+			this->label2->Text = L"Status: UNKNOWN";
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(443, 478);
+			this->Controls->Add(this->label2);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->checkedListBox1);
@@ -120,21 +133,39 @@ namespace DS3RandomWeapon {
 		}
 #pragma endregion
 	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
+		this->button1->Text = L"Start";
+		this->label2->Text = L"Status: Waiting";
 	}
 	private: System::Void textBox1_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs ^e) {
 		e->Handled = (!isdigit(e->KeyChar)) && (e->KeyChar != '.') && (e->KeyChar != (Char)Keys::Delete && e->KeyChar != (Char)Keys::Back);
 	}
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-		int timer = stoi(msclr::interop::marshal_as<std::string>(this->textBox1->Text));
-		std::vector<std::string> bank;
+		if (this->button1->Text == L"Start") {
+			this->label2->Text = L"Status: Running";
+			this->button1->Text = L"Stop";
 
-		for (int i = 0; i < this->checkedListBox1->CheckedItems->Count; i++)
-		{
-			std::string selection = msclr::interop::marshal_as<std::string>(this->checkedListBox1->CheckedItems[i]->ToString());
-			bank.push_back(selection);
+			int timer = atoi(msclr::interop::marshal_as<std::string>(this->textBox1->Text).c_str());
+			std::vector<std::string> bank;
+
+			for (int i = 0; i < this->checkedListBox1->CheckedItems->Count; i++)
+			{
+				std::string selection = msclr::interop::marshal_as<std::string>(this->checkedListBox1->CheckedItems[i]->ToString());
+				bank.push_back(selection);
+			}
+
+			if (bank.size() > 0 && timer > 0) {
+				stopthread = false;
+				somefunction(timer, bank);
+			} else {
+				stopthread = true;
+				this->label2->Text = L"Status: Bob ross disapproves";
+				this->button1->Text = L"Start";
+			}
+		} else {
+			stopthread = true;
+			this->label2->Text = L"Status: Stopped";
+			this->button1->Text = L"Start";
 		}
-
-		somefunction(timer, bank);
 	}
 	};
 }

@@ -141,6 +141,8 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="SomeHeader.h" />
+    <ClInclude Include="Utilities.h" />
+    <ClInclude Include="Weapons_list.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MyForm.resx">
