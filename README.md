@@ -8,9 +8,7 @@ Weapons have random infusion and upgrade level.<br />
 
 The weapon icon won't change when the weapon changes (Update for that coming at some point, waiting for mr. nice shoes)<br />
 
-normal version only contains Weapons you can toggle Shields on and off in this version: https://mega.nz/#!DUUCnIwB!RAkGbD4Or_3rSnR8_6YCByFh0vWi_Zgc2-i6HQcgI2w <br />
-
-Download link per request from reddit user "Blargh676" removed almost all of the shields and their infsuions, Same Weapons but they have less infusions. https://mega.nz/#!7EMXlSra!uKoYRf2YolUq85nYai5aZrS1r11fzhs6JgesVCJA0h0 .<br />
+Download Link: https://mega.nz/#!WUFDXI5a!MWXsX0dBILO1lCajNBxbhFRAMfpa0GeVJ5N-LlnMTx8
 
 <br />Thanks to phokz and other people for making this: http://forum.cheatengine.org/viewtopic.php?t=589191 amazing cheat engine table for Dark Souls 3 which helped out alot, they all have nice shoes. <br />
 
