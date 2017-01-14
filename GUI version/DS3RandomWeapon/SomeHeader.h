@@ -43,7 +43,7 @@ void changeweapon()
 	if (BaseAdress == NULL)
 	{
 //		std::cout << "Failed to get baseaddress, is Dark Souls 3 running?" << std::endl;
-		goto error;
+		goto error_baseaddress;
 	}
 	else
 	{
@@ -52,7 +52,7 @@ void changeweapon()
 		if (ProcessID == NULL)
 		{
 //			std::cout << "Failed to open process, are you running this as admin?" << std::endl;
-			goto error;
+			goto error_processid;
 		}
 		else
 		{
@@ -72,12 +72,19 @@ void changeweapon()
 
 				Sleep(glbl * 1000);
 			}
+
+			goto error;
 		}
 	}
 
-error:
 	// Errors come here, add error handling
-	// I ALSO COULD NOT ACCESS THE GUI FOR SOME REASON
+error_processid:
+	::MessageBox(0, L"Failed to open process, are you running this as admin?", L"DS3 Random Weapon mod", MB_ICONERROR);
+	return;
+error_baseaddress:
+	::MessageBox(0, L"Failed to get baseaddress, is Dark Souls 3 running?", L"DS3 Random Weapon mod", MB_ICONERROR);
+	return;
+error:
 	::MessageBox(0, L"'Something happened' Microsoft 2016", L"DS3 Random Weapon mod", MB_ICONERROR);
 	return;
 end:

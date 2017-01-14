@@ -158,7 +158,7 @@ namespace DS3RandomWeapon {
 				somefunction(timer, bank);
 			} else {
 				stopthread = true;
-				this->label2->Text = L"Status: Bob ross disapproves";
+				this->label2->Text = L"Status: Bob ross";
 				this->button1->Text = L"Start";
 			}
 		} else {
