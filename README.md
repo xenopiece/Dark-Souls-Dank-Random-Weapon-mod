@@ -20,8 +20,8 @@ PLEASE DON'T USE THIS MOD ONLINE AS IT WILL MOST LIKELY  GET YOU BANNED!!!!!!<br
 
 THX TO NILLER303 FOR HELPING OUT WITH THIS MOD HE ALSO HAS NICE SHOES!!!!!<br />
 
-The bobross is a lie
+The bobross is a lie<br />
 
-Shoutout to:
-https://www.twitch.tv/elajjaz for using the mod and trying the secret
-https://www.twitch.tv/lobosjr for using the mod
+Shoutout to:<br />
+https://www.twitch.tv/elajjaz for using the mod and trying the secret<br />
+https://www.twitch.tv/lobosjr for using the mod<br />
