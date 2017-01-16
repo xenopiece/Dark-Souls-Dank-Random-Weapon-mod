@@ -12,7 +12,7 @@ Video here: https://www.youtube.com/watch?v=tKMIhSzeIkk <br />
 Download Link (GUI Version): https://mega.nz/#!WUFDXI5a!MWXsX0dBILO1lCajNBxbhFRAMfpa0GeVJ5N-LlnMTx8
 THE SECRET GIVES YOU GOOD WEAPONS :)<br />
 
-Download Link (GUI Version With Hyper Speed Allowed): https://mega.nz/#!eU0lHRST!h45NOP8Ik7rcv7J3mVJ1UGvg6aAdspUW9O4prm5WlaA
+Download Link (GUI Version With Hyper Speed Allowed): https://mega.nz/#!PctQTI4b!mk1wx0TrKcXAZakBj02t4ahz2-EcB-wFKp_43nq6Oyw
 THE SECRET GIVES YOU GOOD WEAPONS :)<br />
 
 VirusTotal scan link: https://www.virustotal.com/en/file/f493c3327ad995f1e5c347436dba160eea93316aee6cca1742a5f6ce519edfe2/analysis/1484339479/<br />
