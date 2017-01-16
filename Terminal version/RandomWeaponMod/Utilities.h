@@ -110,9 +110,9 @@ namespace Utils {
 
 			int UpgradeLvl;
 			if (isbossweapon) {
-				UpgradeLvl = rand() % 5;
+				UpgradeLvl = rand() % 6;
 			} else {
-				UpgradeLvl = rand() % 10;
+				UpgradeLvl = rand() % 11;
 			}
 			Weapon = Weapon + UpgradeLvl;
 		}
