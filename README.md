@@ -13,7 +13,7 @@ Download Link (GUI Version): https://mega.nz/#!WUFDXI5a!MWXsX0dBILO1lCajNBxbhFRA
 THE SECRET GIVES YOU GOOD WEAPONS :)<br />
 
 Download Link (GUI Version With Hyper Speed Allowed): https://mega.nz/#!eU0lHRST!h45NOP8Ik7rcv7J3mVJ1UGvg6aAdspUW9O4prm5WlaA
-THE SECRET GIVES YOU GOOD STILL WEAPONS :)<br />
+THE SECRET GIVES YOU GOOD WEAPONS :)<br />
 
 VirusTotal scan link: https://www.virustotal.com/en/file/f493c3327ad995f1e5c347436dba160eea93316aee6cca1742a5f6ce519edfe2/analysis/1484339479/<br />
 
