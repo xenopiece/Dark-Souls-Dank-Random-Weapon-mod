@@ -144,7 +144,10 @@ namespace DS3RandomWeapon {
 			this->label2->Text = L"Status: Running";
 			this->button1->Text = L"Stop";
 
-			int timer = atoi(msclr::interop::marshal_as<std::string>(this->textBox1->Text).c_str());
+			std::string num = msclr::interop::marshal_as<std::string>(this->textBox1->Text);
+			double timer = std::stod(num.c_str());
+//			printDBG(timer);
+
 			std::vector<std::string> bank;
 
 			for (int i = 0; i < this->checkedListBox1->CheckedItems->Count; i++)

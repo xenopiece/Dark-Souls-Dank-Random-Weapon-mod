@@ -14,17 +14,15 @@ using namespace System::Threading;
 void printDBG(std::string msg)
 {
 	std::ofstream myfile;
-	myfile.open("debug.txt", std::ios::out);
+	myfile.open("debug.txt", std::ios_base::app | std::ios_base::out);
 	myfile << msg << "\n";
 	myfile.close();
 }
 
-void printDBG(int num)
-{
-	printDBG(std::to_string(num));
-}
+void printDBG(int num) { printDBG(std::to_string(num)); }
+void printDBG(double num) { printDBG(std::to_string(num)); }
 
-int glbl;
+double glbl;
 std::vector<std::string> enableweapons;
 bool stopthread = false;
 void changeweapon()
@@ -70,7 +68,7 @@ void changeweapon()
 
 				WriteProcessMemory(hprocess, (LPVOID*)(RWeapon + primaryrightweb_offset2), &Weapon, sizeof(Weapon), NULL);
 
-				Sleep(glbl * 1000);
+				Sleep((DWORD)(glbl * 1000));
 			}
 
 			goto error;
@@ -100,7 +98,7 @@ void merge(std::vector<std::string> toinsert, std::vector<std::string> tobeinser
 	}
 }
 
-void somefunction(int timer, std::vector<std::string> stuff) 
+void somefunction(double timer, std::vector<std::string> stuff)
 {
 	enableweapons.clear();
 
