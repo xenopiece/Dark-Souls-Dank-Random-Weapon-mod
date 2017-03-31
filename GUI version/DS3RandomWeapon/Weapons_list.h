@@ -16,6 +16,8 @@ std::vector<std::string> StandardBows = {
 	"14160000 Shield Crossbow",
 	"14170000 Sniper Crossbow",
 	"14050000 Heavy Crossbow",
+	"14120000 - White Tree Bow(White Birch Bow)",
+	"14190000 - Repeating Crossbow",
 };
 std::vector<std::string> StandardShields = {
 	"20000000 Buckler",
@@ -76,6 +78,9 @@ std::vector<std::string> StandardShields = {
 	"22120000 Curse Ward Greatshield",
 	"22130000 Bonewheel Shield",
 	"22140000 Stone Greatshield",
+	"16120000 - Great Door Twinshields",
+	"20310000 - Dragonhead Shield",
+	"21310000 - Dragonhead Greatshield",
 };
 std::vector<std::string> StandardShields_Poison = {
 	"20001100 Poison Buckler",
@@ -713,6 +718,8 @@ std::vector<std::string> StandardShields_Simple = {
 };
 
 std::vector<std::string> standardweapons = {
+
+
 	"110000 Fists",
 	"1000000 Dagger",
 	"1010000 Bandits Knife ",
@@ -873,6 +880,19 @@ std::vector<std::string> standardweapons = {
 	"11050000 Crow Talons",
 	"16140000 Valorheart",
 	"16150000 Crow Quills",
+	"1140000 - Aquamarine Dagger",
+	"1150000 - Murky Hand Scythe",
+	"2250000 - Ringed Knight Straight Sword",
+	"2260000 - Gael Greatsword",
+	"4130000 - Demon Scar",
+	"5060000 - Frayed Blade",
+	"6380000 - Herald Curved Greatsword", //later
+	"8320000 - Ledo's Great Hammer",
+	"9240000 - Ringed Knight Spear",
+	"9250000 - Lothric War Banner", //later
+	"9260000 - Crucifix of the Mad King(Halberd)",
+	"10170000 - Splitleaf Greatsword(It's a Halberd)", //later
+	"16160000 - Ringed Knight Paired",
 };
 std::vector<std::string> StandardWeapon_Blessed = {
 	"1001400 Blessed Dagger",
@@ -966,6 +986,11 @@ std::vector<std::string> StandardWeapon_Blessed = {
 	"9230400 Follower Javelin",
 	"11050400 Crow Talons",
 	"16150400 Crow Quills",
+	"1150400 - Murky Hand Scythe",
+	"6380400 - Herald Curved Greatsword",
+	"9250400 - Lothric War Banner",
+	"10170400 - Splitleaf Greatsword(It's a Halberd)",
+
 };
 std::vector<std::string> StandardWeapon_Blood = {
 	"1001200 Blood Dagger",
@@ -1058,6 +1083,11 @@ std::vector<std::string> StandardWeapon_Blood = {
 	"9230200 Follower Javelin",
 	"11050200 Crow Talons",
 	"16150200 Crow Quills",
+	"1150200 - Murky Hand Scythe",
+	"6380200 - Herald Curved Greatsword",
+	"9250200 - Lothric War Banner",
+	"10170200 - Splitleaf Greatsword(It's a Halberd)",
+
 };
 std::vector<std::string> StandardWeapon_Chaos = {
 	"1000700 Chaos Dagger",
@@ -1150,6 +1180,11 @@ std::vector<std::string> StandardWeapon_Chaos = {
 	"9230700 Follower Javelin",
 	"11050700 Crow Talons",
 	"16150700 Crow Quills",
+	"1150700 - Murky Hand Scythe",
+	"6380700 - Herald Curved Greatsword",
+	"9250700 - Lothric War Banner",
+	"10170700 - Splitleaf Greatsword(It's a Halberd)",
+
 };
 std::vector<std::string> StandardWeapon_Crystal = {
 	"1000500 Crystal Dagger",
@@ -1242,6 +1277,11 @@ std::vector<std::string> StandardWeapon_Crystal = {
 	"9230500 Follower Javelin",
 	"11050500 Crow Talons",
 	"16150500 Crow Quills",
+	"1150500 - Murky Hand Scythe",
+	"6380500 - Herald Curved Greatsword",
+	"9250500 - Lothric War Banner",
+	"10170500 - Splitleaf Greatsword(It's a Halberd)",
+
 };
 std::vector<std::string> StandardWeapon_Dark = {
 	"1001000 Dark Dagger",
@@ -1335,6 +1375,11 @@ std::vector<std::string> StandardWeapon_Dark = {
 	"9231000 Follower Javelin",
 	"11051000 Crow Talons",
 	"16151000 Crow Quills",
+	"1151000 - Murky Hand Scythe",
+	"6381000 - Herald Curved Greatsword",
+	"9251000 - Lothric War Banner",
+	"10171000 - Splitleaf Greatsword(It's a Halberd)",
+
 };
 std::vector<std::string> StandardWeapon_Deep = {
 	"1000900 Deep Dagger",
@@ -1427,6 +1472,11 @@ std::vector<std::string> StandardWeapon_Deep = {
 	"9230900 Follower Javelin",
 	"11050900 Crow Talons",
 	"16150900 Crow Quills",
+	"1150900 - Murky Hand Scythe",
+	"6380900 - Herald Curved Greatsword",
+	"9250900 - Lothric War Banner",
+	"10170900 - Splitleaf Greatsword(It's a Halberd)",
+
 };
 std::vector<std::string> StandardWeapon_Fire = {
 	"1000600 Fire Dagger",
@@ -1518,6 +1568,11 @@ std::vector<std::string> StandardWeapon_Fire = {
 	"9230600 Follower Javelin",
 	"11050600 Crow Talons",
 	"16150600 Crow Quills",
+	"1150600 - Murky Hand Scythe",
+	"6380600 - Herald Curved Greatsword",
+	"9250600 - Lothric War Banner",
+	"10170600 - Splitleaf Greatsword(It's a Halberd)",
+
 };
 std::vector<std::string> StandardWeapon_Heavy = {
 	"1000100 Heavy Dagger",
@@ -1610,6 +1665,11 @@ std::vector<std::string> StandardWeapon_Heavy = {
 	"9230100 Follower Javelin",
 	"11050100 Crow Talons",
 	"16150100 Crow Quills",
+	"1150100 - Murky Hand Scythe",
+	"6380100 - Herald Curved Greatsword",
+	"9250100 - Lothric War Banner",
+	"10170100 - Splitleaf Greatsword(It's a Halberd)",
+
 };
 std::vector<std::string> StandardWeapon_Hollow = {
 	"1001500 Hollow Dagger",
@@ -1703,6 +1763,11 @@ std::vector<std::string> StandardWeapon_Hollow = {
 	"9230500 Follower Javelin",
 	"11050500 Crow Talons",
 	"16150500 Crow Quills",
+	"1150500 - Murky Hand Scythe",
+	"6380500 - Herald Curved Greatsword",
+	"9250500 - Lothric War Banner",
+	"10170500 - Splitleaf Greatsword(It's a Halberd)",
+
 };
 
 std::vector<std::string> StandardWeapon_Lightning = {
@@ -1795,6 +1860,11 @@ std::vector<std::string> StandardWeapon_Lightning = {
 	"9230800 Follower Javelin",
 	"11050800 Crow Talons",
 	"16150800 Crow Quills",
+	"1150800 - Murky Hand Scythe",
+	"6380800 - Herald Curved Greatsword",
+	"9250800 - Lothric War Banner",
+	"10170800 - Splitleaf Greatsword(It's a Halberd)",
+
 };
 
 std::vector<std::string> StandardWeapon_Poison = {
@@ -1888,6 +1958,11 @@ std::vector<std::string> StandardWeapon_Poison = {
 	"9230100 Follower Javelin",
 	"11050100 Crow Talons",
 	"16150100 Crow Quills",
+	"1150100 - Murky Hand Scythe",
+	"6380100 - Herald Curved Greatsword",
+	"9250100 - Lothric War Banner",
+	"10170100 - Splitleaf Greatsword(It's a Halberd)",
+
 };
 
 std::vector<std::string> StandardWeapon_Raw = {
@@ -1982,6 +2057,11 @@ std::vector<std::string> StandardWeapon_Raw = {
 	"9230300 Follower Javelin",
 	"11050300 Crow Talons",
 	"16150300 Crow Quills",
+	"1151300 - Murky Hand Scythe",
+	"6381300 - Herald Curved Greatsword",
+	"9251300 - Lothric War Banner",
+	"10171300 - Splitleaf Greatsword(It's a Halberd)",
+
 };
 
 std::vector<std::string> StandardWeapon_Refined = {
@@ -2071,6 +2151,11 @@ std::vector<std::string> StandardWeapon_Refined = {
 	"9230300 Follower Javelin",
 	"11050300 Crow Talons",
 	"16150300 Crow Quills",
+	"1150300 - Murky Hand Scythe",
+	"6380300 - Herald Curved Greatsword",
+	"9250300 - Lothric War Banner",
+	"10170300 - Splitleaf Greatsword(It's a Halberd)",
+
 };
 
 std::vector<std::string> StandardWeapon_Sharp = {
@@ -2164,6 +2249,11 @@ std::vector<std::string> StandardWeapon_Sharp = {
 	"9230200 Follower Javelin",
 	"11050200 Crow Talons",
 	"16150200 Crow Quills",
+	"1150200 - Murky Hand Scythe",
+	"6380200 - Herald Curved Greatsword",
+	"9250200 - Lothric War Banner",
+	"10170200 - Splitleaf Greatsword(It's a Halberd)",
+
 };
 std::vector<std::string> StandardWeapon_Simple = {
 	"1000400 Simple Dagger",
@@ -2255,6 +2345,11 @@ std::vector<std::string> StandardWeapon_Simple = {
 	"9230400 Follower Javelin",
 	"11050400 Crow Talons",
 	"16150400 Crow Quills",
+	"1150400 - Murky Hand Scythe",
+	"6380400 - Herald Curved Greatsword",
+	"9250400 - Lothric War Banner",
+	"10170400 - Splitleaf Greatsword(It's a Halberd)",
+
 };
 
 std::vector<std::string> StandardWhip = {
@@ -2357,135 +2452,82 @@ std::vector<std::string> boss_weaponlist = {
 	"12040000 Witch's Locks",
 	"8310000 Quakestone Hamme",
 	"16140000 Valorhear",
-	"8260000 Dragon Toot",
 	"6370000 Storm Rule",
 	"6250000 Black Knight Sword",
-	"10150000 Black Knight Glaive",
-	"10160000 Immolation Tinder",
 	"8220000 Heysel Pic",
-	"5040000 Bloodlust",
-	"5050000 Darkdrif",
 	"5020000 Chaos Blad",
 	"10070000 Pontiff Knight Great Scythe",
 	"9190000 Yorshka's Spea",
 	"9130000 Tailbone Spea",
-	"13120000 Golden Ritual Spea",
 	"9220000 Dragonslayer Spear",
 	"8170000 Gargoyle Flame Hammer",
-	"8290000 Morne's Great Hamme",
-	"8270000 Smough's Great Hamme",
 	"2140000 Irithyll Straight Sword",
 	"2180000 Morion Blade",
 	"2110000 Sunlight Straight Swor",
 	"2230000 Anri's Straight Sword",
-	"3050000 Irithyll Rapie",
 	"10050000 Black Knight Greatax",
-	"11040000 Dark Hand",
-	"6360000 Old Wolf Curved Sword",
 	"7130000 Eleonora",
 	"12070000 Rose of Ariande",
-	"10180000 Friede's Great Scyth",
 	"7180000 Earth Seeke",
-	"4100000 Crescent Moon Sword",
-	"6340000 Firelink Greatsword",
 	"6170000 Greatsword of Judgment",
-	"6310000 Hollowslayer Greatswor",
-	"6320000 Moonlight Greatswor",
 	"6270000 Twin Princes' Greatswor",
 	"6300000 Wolf Knight's Greatswor",
-	"6290000 Wolnir's Holy Swor",
 	"10100000 Gundyr's Halberd ",
-	"9170000 Arstor's Spear",
 	"9160000 Dragonslayer Swordspear",
-	"8190000 Old King's Great Hammer",
 	"8180000 Vordt's Great Hammer",
 	"6280000 Lothric's Holy Sword",
 	"3040000 Crystal Sage's Rapie",
-	"6230000 Yhorm's Great Machete",
 	"7110000 Dragonslayer Greataxe",
 	"7120000 Demon's Greataxe",
-	"11030000 Demon's Fis",
 	"1080000 Tailbone Short Sword",
 	"4080000 Storm Curved Sword",
-	"16040000 Dancer's Enchanted Swords",
 	"6180000 Profaned Greatsword",
-	"6260000 Lorian's Greatsword",
 	"6200000 Farron Greatsword",
-	"4070000 Pontiff Knight Curved Sword",
-	"6350000 Fume Ultra Greatswor",
-	"6130000 Black Knight Greatsword",
-	"12040000 Witch's Locks",
-	"8310000 Quakestone Hamme",
-	"16140000 Valorhear",
 	"8260000 Dragon Toot",
-	"6370000 Storm Rule",
-	"6250000 Black Knight Sword",
 	"10150000 Black Knight Glaive",
 	"10160000 Immolation Tinder",
-	"8220000 Heysel Pic",
 	"5040000 Bloodlust",
 	"5050000 Darkdrif",
-	"5020000 Chaos Blad",
-	"10070000 Pontiff Knight Great Scythe",
-	"9190000 Yorshka's Spea",
-	"9130000 Tailbone Spea",
 	"13120000 Golden Ritual Spea",
-	"9220000 Dragonslayer Spear",
-	"8170000 Gargoyle Flame Hammer",
 	"8290000 Morne's Great Hamme",
 	"8270000 Smough's Great Hamme",
-	"2140000 Irithyll Straight Sword",
-	"2180000 Morion Blade",
-	"2110000 Sunlight Straight Swor",
-	"2230000 Anri's Straight Sword",
 	"3050000 Irithyll Rapie",
-	"10050000 Black Knight Greatax",
 	"11040000 Dark Hand",
 	"6360000 Old Wolf Curved Sword",
-	"7130000 Eleonora",
-	"12070000 Rose of Ariande",
-	"10180000 Friede's Great Scyth",
-	"7180000 Earth Seeke",
 	"4100000 Crescent Moon Sword",
 	"6340000 Firelink Greatsword",
-	"6170000 Greatsword of Judgment",
 	"6310000 Hollowslayer Greatswor",
 	"6320000 Moonlight Greatswor",
-	"6270000 Twin Princes' Greatswor",
-	"6300000 Wolf Knight's Greatswor",
 	"6290000 Wolnir's Holy Swor",
-	"10100000 Gundyr's Halberd ",
 	"9170000 Arstor's Spear",
-	"9160000 Dragonslayer Swordspear",
 	"8190000 Old King's Great Hammer",
-	"8180000 Vordt's Great Hammer",
-	"6280000 Lothric's Holy Sword",
-	"3040000 Crystal Sage's Rapie",
 	"6230000 Yhorm's Great Machete",
-	"7110000 Dragonslayer Greataxe",
-	"7120000 Demon's Greataxe",
 	"11030000 Demon's Fis",
-	"1080000 Tailbone Short Sword",
-	"4080000 Storm Curved Sword",
 	"16040000 Dancer's Enchanted Swords",
-	"6180000 Profaned Greatsword",
 	"6260000 Lorian's Greatsword",
-	"6200000 Farron Greatsword",
-	"22090000 Wolf Knight's Greatshield"
-	"20150000 Havel's Greatshiel"
-	"2050000 Moaning Shield"
-	"22110000 Greatshield of Glory loo"
-	"20290000 Ancient Dragon Greatshield"
-	"21260000 Spirit Tree Crest Shield"
-	"21060000 Pontiff Knight Shield look"
-	"21120000 Silver Knight Shield loo"
-	"21220000 Golden Wing Crest Shield  loo"
-	"21180000 Dragon Crest Shield"
-	"21100000 Black Knight Shield"
-	"22070000 Yhorm's Greatshield"
-	"22040000 Dragonslayer Greatshield"
-	"22120000 Curse Ward Greatshield"
-	"21280000 Shield of Want"
+	"22090000 Wolf Knight's Greatshield",
+	"20150000 Havel's Greatshiel",
+	"2050000 Moaning Shield",
+	"22110000 Greatshield of Glory loo",
+	"20290000 Ancient Dragon Greatshield",
+	"21260000 Spirit Tree Crest Shield",
+	"21060000 Pontiff Knight Shield look",
+	"21120000 Silver Knight Shield loo",
+	"21220000 Golden Wing Crest Shield  loo",
+	"21180000 Dragon Crest Shield",
+	"21100000 Black Knight Shield",
+	"22070000 Yhorm's Greatshield",
+	"22040000 Dragonslayer Greatshield",
+	"22120000 Curse Ward Greatshield",
+	"21280000 Shield of Want",
+	"1140000 Aquamarine Dagger",
+	"2250000 - Ringed Knight Straight Sword",
+	"2260000 - Gael Greatsword",
+	"4130000 - Demon Scar",
+	"5060000 - Frayed Blade",
+	"8320000 - Ledo's Great Hammer",
+	"9240000 - Ringed Knight Spear",
+	"16160000 - Ringed Knight Paired",
 };
 
 std::vector<std::string> secretascii = {
