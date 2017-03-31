@@ -28,7 +28,7 @@ bool stopthread = false;
 void changeweapon()
 {
 	// Offsets
-	DWORD BaseA = 0x47043A8;
+	DWORD BaseA = 0x473A818;
 	__int64 RWeapon = 0;
 	DWORD primaryrightweb_offset1 = 0x10;
 	DWORD primaryrightweb_offset2 = 0x330;
