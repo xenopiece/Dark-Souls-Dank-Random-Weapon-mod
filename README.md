@@ -9,7 +9,7 @@ The weapon icon won't change when the weapon changes (Update for that coming at 
 
 Video here: https://www.youtube.com/watch?v=tKMIhSzeIkk <br />
 
-Download Link (GUI Version): https://mega.nz/#!3dNRmI7J!c2RjKMFxV2nAE1AvZPR0_lzVJD53k90q7oX3PddWgxM
+Download Link (GUI Version): https://mega.nz/#!CBkW1QwJ!AGci23MxC3s7xrB9CqVrXLJuP8LNXf_c6s3ah7sUsX0
 THE SECRET GIVES YOU GOOD WEAPONS :)<br />
 
 Download Link (GUI Version With Hyper Speed Allowed): https://mega.nz/#!PctQTI4b!mk1wx0TrKcXAZakBj02t4ahz2-EcB-wFKp_43nq6Oyw
