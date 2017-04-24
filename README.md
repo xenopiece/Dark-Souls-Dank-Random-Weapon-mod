@@ -9,8 +9,8 @@ The weapon icon won't change when the weapon changes (Update for that coming at 
 
 Video here: https://www.youtube.com/watch?v=tKMIhSzeIkk <br />
 
-Download Link (GUI Version): https://mega.nz/#!aYcUmCSI!g5YF9ZywLmZyXzrX_oKCEoQjoBviayZZt6pvd0wIv84
-THE SECRET GIVES YOU GOOD WEAPONS :)<br />
+Download Link (GUI Version): https://mega.nz/#!aYcUmCSI!g5YF9ZywLmZyXzrX_oKCEoQjoBviayZZt6pvd0wIv84<br>
+TRY THE SECRET :)<br>
 
 VirusTotal scan link: https://www.virustotal.com/en/file/f493c3327ad995f1e5c347436dba160eea93316aee6cca1742a5f6ce519edfe2/analysis/1484339479/<br />
 
