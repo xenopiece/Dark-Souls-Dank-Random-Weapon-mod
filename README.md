@@ -12,6 +12,15 @@ Video here: https://www.youtube.com/watch?v=tKMIhSzeIkk <br />
 Download Link (GUI Version): https://mega.nz/#!uY822ICA!lFH26fBXSIIjO2P_uXZ8pIkaxF_SZ-skvo_Sn6hQ3FE<br>
 TRY THE SECRET :)<br>
 
+How To Use Gui Version
+1. Start the mod
+2. Load / make your Character
+3. Set the Timer to interval of Randomize
+4. Have fun
+if status Shows Bob Ross their was a Error
+
+The terminal version was removed because it was horribly outdated, might add it back.
+
 VirusTotal scan link: https://www.virustotal.com/en/file/f493c3327ad995f1e5c347436dba160eea93316aee6cca1742a5f6ce519edfe2/analysis/1484339479/<br />
 
 <br />Thanks to phokz and other people for making this: http://forum.cheatengine.org/viewtopic.php?t=589191 amazing cheat engine table for Dark Souls 3 which helped out alot, they all have nice shoes. <br />
