@@ -17,7 +17,7 @@ How To Use Gui Version
 2. Load / make your Character
 3. Set the Timer to interval of Randomize
 4. Have fun
-if status Shows Bob Ross their was a Error
+if status Shows Bob Ross there was an error
 
 The terminal version was removed because it was horribly outdated, might add it back.
 
