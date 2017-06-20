@@ -25,8 +25,14 @@ void printDBG(double num) { printDBG(std::to_string(num)); }
 double glbl;
 std::vector<std::string> enableweapons;
 bool stopthread = false;
+bool isrunning = false;
 void changeweapon()
 {
+	if (isrunning != true){
+		isrunning = true;
+	} else {
+		return;
+	}
 	// Offsets
 	DWORD BaseA = 0x4740178;
 	__int64 RWeapon = 0;
@@ -78,14 +84,18 @@ void changeweapon()
 	// Errors come here, add error handling
 error_processid:
 	::MessageBox(0, L"Failed to open process, are you running this as admin?", L"DS3 Random Weapon mod", MB_ICONERROR);
+	isrunning = false;
 	return;
 error_baseaddress:
 	::MessageBox(0, L"Failed to get baseaddress, is Dark Souls 3 running?", L"DS3 Random Weapon mod", MB_ICONERROR);
+	isrunning = false;
 	return;
 error:
 	::MessageBox(0, L"'Something happened' Microsoft 2016", L"DS3 Random Weapon mod", MB_ICONERROR);
+	isrunning = false;
 	return;
 end:
+	isrunning = false;
 	return;
 }
 
