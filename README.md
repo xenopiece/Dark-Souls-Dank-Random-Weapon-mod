@@ -35,4 +35,9 @@ The bobross is a lie<br />
 Shoutout to:<br />
 https://www.twitch.tv/elajjaz for using the mod and trying the secret<br />
 https://www.twitch.tv/lobosjr for using the mod<br />
-https://www.twitch.tv/Iron_Pineapple for using the mod and finding issues<br />
+https://www.twitch.tv/Iron_Pineapple for using the mod, finding issues and his inspiring messages that made me update the mod<br />
+
+Infos:
+1. DOES NOT WORK IN PVP
+2. HAS RANDOM WEAPON LEVELS
+3. VALUES UNDER 1 GIVES YOU LONG LOADING SCREENS
