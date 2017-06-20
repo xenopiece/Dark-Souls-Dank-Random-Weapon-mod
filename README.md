@@ -9,7 +9,7 @@ The weapon icon won't change when the weapon changes (Update for that coming at 
 
 Video here: https://www.youtube.com/watch?v=tKMIhSzeIkk <br />
 
-Download Link (GUI Version): https://mega.nz/#!uY822ICA!lFH26fBXSIIjO2P_uXZ8pIkaxF_SZ-skvo_Sn6hQ3FE<br>
+Download Link (GUI Version): https://mega.nz/#!sEQGyTSC!I0PgV0Tuidrcepl3x_PRXberMGUah2QI6XPE39-atFM<br>
 TRY THE SECRET :)<br>
 
 How To Use Gui Version
@@ -17,6 +17,7 @@ How To Use Gui Version
 2. Load / make your Character
 3. Set the Timer to interval of Randomize
 4. Have fun
+5. You can press ALT+X globally to start and stop the program
 if status Shows Bob Ross there was an error
 
 The terminal version was removed because it was horribly outdated, might add it back.
@@ -34,3 +35,4 @@ The bobross is a lie<br />
 Shoutout to:<br />
 https://www.twitch.tv/elajjaz for using the mod and trying the secret<br />
 https://www.twitch.tv/lobosjr for using the mod<br />
+https://www.twitch.tv/Iron_Pineapple for using the mod and finding issues<br />

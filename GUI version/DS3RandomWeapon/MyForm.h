@@ -9,6 +9,8 @@ namespace DS3RandomWeapon {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Threading;
+	using namespace System::Diagnostics;
 
 	/// <summary>
 	/// Summary for MyForm
@@ -16,6 +18,7 @@ namespace DS3RandomWeapon {
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
 	public:
+		Thread^ oThread;
 		MyForm(void)
 		{
 			InitializeComponent();
@@ -23,7 +26,9 @@ namespace DS3RandomWeapon {
 			//TODO: Add the constructor code here
 			//
 		}
-
+	private: System::Windows::Forms::Label^  label3;
+	public:
+	private: System::Windows::Forms::Button^  button1;
 	protected:
 		/// <summary>
 		/// Clean up any resources being used.
@@ -35,7 +40,17 @@ namespace DS3RandomWeapon {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Button^  button1;
+		virtual void OnHandleCreated(EventArgs^ e) override {
+			__super::OnHandleCreated(e);
+			RegisterHotKey((HWND)this->Handle.ToPointer(), 1,
+				MOD_ALT, (UINT)Keys::X);
+		}
+		virtual void WndProc(Message% m) override {
+			if (m.Msg == WM_HOTKEY && m.WParam.ToInt32() == 1) {
+				this->button1->PerformClick();
+			}
+			__super::WndProc(m);
+		}
 //	public:
 	private: System::Windows::Forms::CheckedListBox^  checkedListBox1;
 	private: System::Windows::Forms::Label^  label1;
@@ -60,13 +75,14 @@ namespace DS3RandomWeapon {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(249, 61);
+			this->button1->Location = System::Drawing::Point(249, 88);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(182, 405);
+			this->button1->Size = System::Drawing::Size(182, 378);
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"Start";
 			this->button1->UseVisualStyleBackColor = true;
@@ -102,23 +118,33 @@ namespace DS3RandomWeapon {
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(56, 20);
 			this->textBox1->TabIndex = 4;
-			this->textBox1->KeyPress += gcnew KeyPressEventHandler(this, &MyForm::textBox1_KeyPress);
 			// 
 			// label2
 			// 
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(249, 35);
+			this->label2->Location = System::Drawing::Point(249, 36);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(182, 23);
 			this->label2->TabIndex = 5;
 			this->label2->Text = L"Status: UNKNOWN";
+			this->label2->Click += gcnew System::EventHandler(this, &MyForm::label2_Click);
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Location = System::Drawing::Point(252, 59);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(179, 26);
+			this->label3->TabIndex = 6;
+			this->label3->Text = L"ALT+X starts and stops the program \r\nglobally";
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(443, 478);
+			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label1);
@@ -170,5 +196,7 @@ namespace DS3RandomWeapon {
 			this->button1->Text = L"Start";
 		}
 	}
-	};
+	private: System::Void label2_Click(System::Object^  sender, System::EventArgs^  e) {
+	}
+};
 }
