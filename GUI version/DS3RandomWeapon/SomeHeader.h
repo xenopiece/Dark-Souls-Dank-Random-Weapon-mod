@@ -98,7 +98,6 @@ void merge(std::vector<std::string> toinsert, std::vector<std::string> tobeinser
 	}
 }
 
-int first = 0;
 void somefunction(double timer, std::vector<std::string> stuff)
 {
 	enableweapons.clear();
@@ -323,10 +322,7 @@ void somefunction(double timer, std::vector<std::string> stuff)
 	}
 
 	glbl = timer;
-	if (first == 0) {
-		Thread^ myThread = gcnew Thread(gcnew ThreadStart(changeweapon));
-		myThread->IsBackground = true;
-		myThread->Start();
-		first = 1;
-	}
+	Thread^ myThread = gcnew Thread(gcnew ThreadStart(changeweapon));
+	myThread->IsBackground = true;
+	myThread->Start();
 }
