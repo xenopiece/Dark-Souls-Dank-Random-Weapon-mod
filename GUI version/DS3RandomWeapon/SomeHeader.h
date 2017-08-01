@@ -1,3 +1,4 @@
+// Most of this is actually bad and should be redone
 #pragma once
 #include <iostream>
 #include <fstream>
@@ -25,15 +26,8 @@ void printDBG(double num) { printDBG(std::to_string(num)); }
 
 double glbl;
 std::vector<std::string> enableweapons;
-bool stopthread = false;
-bool isrunning = false;
 void changeweapon()
 {
-	if (isrunning != true){
-		isrunning = true;
-	} else {
-		return;
-	}
 	// Offsets
 	DWORD BaseA = 0x4740178;
 	__int64 RWeapon = 0;
@@ -66,11 +60,6 @@ void changeweapon()
 			ReadProcessMemory(hprocess, (LPVOID*)(RWeapon + primaryrightweb_offset1), &RWeapon, sizeof(RWeapon), NULL);
 
 			while (true) {
-				if (stopthread == true) {
-					stopthread = false;
-					goto end;
-				}
-
 				Weapon = Utils::Weaponsfcs(enableweapons);
 
 				WriteProcessMemory(hprocess, (LPVOID*)(RWeapon + primaryrightweb_offset2), &Weapon, sizeof(Weapon), NULL);
@@ -85,18 +74,12 @@ void changeweapon()
 	// Errors come here, add error handling
 error_processid:
 	::MessageBox(0, L"Failed to open process, are you running this as admin?", L"DS3 Random Weapon mod", MB_ICONERROR);
-	isrunning = false;
 	return;
 error_baseaddress:
 	::MessageBox(0, L"Failed to get baseaddress, is Dark Souls 3 running?", L"DS3 Random Weapon mod", MB_ICONERROR);
-	isrunning = false;
 	return;
 error:
 	::MessageBox(0, L"'Something happened' Microsoft 2016", L"DS3 Random Weapon mod", MB_ICONERROR);
-	isrunning = false;
-	return;
-end:
-	isrunning = false;
 	return;
 }
 
@@ -115,7 +98,21 @@ bool is_number(const std::string& s)
 		s.end(), [](char c) { return !std::isdigit(c); }) == s.end();
 }
 
-void somefunction(double timer, std::vector<std::string> stuff)
+public ref class SystemThreadSucks
+{
+public:
+	static void start(Thread^ myThread, double timer, std::vector<std::string> stuff);
+	static void stop(Thread^ myThread);
+};
+
+void SystemThreadSucks::stop(Thread^ myThread)
+{
+	if (myThread && myThread->IsAlive == TRUE) {
+		myThread->Abort();
+	}
+}
+
+void SystemThreadSucks::start(Thread^ myThread, double timer, std::vector<std::string> stuff)
 {
 	enableweapons.clear();
 
@@ -339,7 +336,11 @@ void somefunction(double timer, std::vector<std::string> stuff)
 	}
 
 	glbl = timer;
-	Thread^ myThread = gcnew Thread(gcnew ThreadStart(changeweapon));
+
+	SystemThreadSucks::stop(myThread);
+
+	myThread = gcnew Thread(gcnew ThreadStart(changeweapon));
 	myThread->IsBackground = true;
 	myThread->Start();
 }
+

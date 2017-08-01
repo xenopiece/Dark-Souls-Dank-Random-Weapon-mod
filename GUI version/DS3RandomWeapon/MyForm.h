@@ -27,6 +27,7 @@ namespace DS3RandomWeapon {
 			//
 		}
 	private: System::Windows::Forms::Label^  label3;
+	private: Thread^ myThread;
 	public:
 	private: System::Windows::Forms::Button^  button1;
 	public:
@@ -53,6 +54,7 @@ namespace DS3RandomWeapon {
 		}
 //	public:
 	private: System::Windows::Forms::CheckedListBox^  checkedListBox1;
+	private: Thread^  thrd;
 	private: System::Windows::Forms::Label^  label1;
 	private: System::Windows::Forms::TextBox^  textBox1;
 	public: System::Windows::Forms::Label^  label2;
@@ -196,15 +198,13 @@ namespace DS3RandomWeapon {
 			}
 
 			if (bank.size() > 0 && timer > 0) {
-				stopthread = false;
-				somefunction(timer, bank);
+				SystemThreadSucks::start(thrd, timer, bank);
 			} else {
-				stopthread = true;
-				this->label2->Text = L"Status: Error";
+				this->label2->Text = L"Status: Selection error";
 				this->button1->Text = L"Start";
 			}
 		} else {
-			stopthread = true;
+			SystemThreadSucks::stop(thrd);
 			this->label2->Text = L"Status: Stopped";
 			this->button1->Text = L"Start";
 		}
