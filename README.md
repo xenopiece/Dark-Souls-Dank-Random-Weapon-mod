@@ -9,8 +9,8 @@ The weapon icon won't change when the weapon changes (Update for that coming at 
 
 Video here: https://www.youtube.com/watch?v=tKMIhSzeIkk <br />
 
-Download Link (GUI Version): https://mega.nz/#!ERgH3T7A!MDkPTuyrDRon59KAUGcHVXhkipSzR5DgqP9_ZJiZ5Vg<br>
-TRY THE SECRET :)<br>
+Download Link (GUI Version): https://mega.nz/#!oZJxDCLY!OH5p7nnrln_rq9dVhk9YLeRN_nogWD7yhkRqAyrTmdg<br>
+The newest version is the one with global hotkey<br>
 
 How To Use Gui Version
 1. Start the mod
