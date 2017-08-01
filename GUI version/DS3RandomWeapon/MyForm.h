@@ -29,7 +29,7 @@ namespace DS3RandomWeapon {
 	private: System::Windows::Forms::Label^  label3;
 	public:
 	private: System::Windows::Forms::Button^  button1;
-	protected:
+	public:
 		/// <summary>
 		/// Clean up any resources being used.
 		/// </summary>
@@ -118,6 +118,7 @@ namespace DS3RandomWeapon {
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(56, 20);
 			this->textBox1->TabIndex = 4;
+			this->textBox1->Text = L"1";
 			// 
 			// label2
 			// 
@@ -166,11 +167,23 @@ namespace DS3RandomWeapon {
 		e->Handled = (!isdigit(e->KeyChar)) && (e->KeyChar != '.') && (e->KeyChar != (Char)Keys::Delete && e->KeyChar != (Char)Keys::Back);
 	}
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+		if (String::IsNullOrEmpty(this->textBox1->Text)) {
+
+			::MessageBox(NULL,
+				L"Error, no timer value set",
+				L"Error",
+				MB_OK);
+		}
+
 		if (this->button1->Text == L"Start") {
+			std::string num = msclr::interop::marshal_as<std::string>(this->textBox1->Text);
+			if (!is_number(num)) {
+				return;
+			}
+
 			this->label2->Text = L"Status: Running";
 			this->button1->Text = L"Stop";
 
-			std::string num = msclr::interop::marshal_as<std::string>(this->textBox1->Text);
 			double timer = std::stod(num.c_str());
 //			printDBG(timer);
 
@@ -187,7 +200,7 @@ namespace DS3RandomWeapon {
 				somefunction(timer, bank);
 			} else {
 				stopthread = true;
-				this->label2->Text = L"Status: Bob ross";
+				this->label2->Text = L"Status: Error";
 				this->button1->Text = L"Start";
 			}
 		} else {
