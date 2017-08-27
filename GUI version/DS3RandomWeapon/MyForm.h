@@ -58,6 +58,7 @@ namespace DS3RandomWeapon {
 	private: System::Windows::Forms::Label^  label1;
 	private: System::Windows::Forms::TextBox^  textBox1;
 	public: System::Windows::Forms::Label^  label2;
+	private: SystemThreadSucks sts;
 
 	private:
 		/// <summary>
@@ -103,6 +104,7 @@ namespace DS3RandomWeapon {
 			this->checkedListBox1->Name = L"checkedListBox1";
 			this->checkedListBox1->Size = System::Drawing::Size(231, 454);
 			this->checkedListBox1->TabIndex = 1;
+			this->checkedListBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::checkedListBox1_SelectedIndexChanged);
 			// 
 			// label1
 			// 
@@ -121,6 +123,7 @@ namespace DS3RandomWeapon {
 			this->textBox1->Size = System::Drawing::Size(56, 20);
 			this->textBox1->TabIndex = 4;
 			this->textBox1->Text = L"1";
+			this->textBox1->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox1_TextChanged);
 			// 
 			// label2
 			// 
@@ -159,6 +162,8 @@ namespace DS3RandomWeapon {
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
+
+
 		}
 #pragma endregion
 	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
@@ -178,38 +183,50 @@ namespace DS3RandomWeapon {
 		}
 
 		if (this->button1->Text == L"Start") {
-			std::string num = msclr::interop::marshal_as<std::string>(this->textBox1->Text);
-			if (!is_number(num)) {
-				return;
-			}
-
 			this->label2->Text = L"Status: Running";
 			this->button1->Text = L"Stop";
 
-			double timer = std::stod(num.c_str());
-//			printDBG(timer);
-
-			std::vector<std::string> bank;
-
-			for (int i = 0; i < this->checkedListBox1->CheckedItems->Count; i++)
-			{
-				std::string selection = msclr::interop::marshal_as<std::string>(this->checkedListBox1->CheckedItems[i]->ToString());
-				bank.push_back(selection);
-			}
-
-			if (bank.size() > 0 && timer > 0) {
-				SystemThreadSucks::start(thrd, timer, bank);
+			if (sts.WeaponListNotEmpty() && sts.glbl > 0) {
+				sts.start(thrd);
 			} else {
 				this->label2->Text = L"Status: Selection error";
 				this->button1->Text = L"Start";
 			}
 		} else {
-			SystemThreadSucks::stop(thrd);
-			this->label2->Text = L"Status: Stopped";
-			this->button1->Text = L"Start";
+			sts.stop(thrd);
+			if (!thrd->IsAlive) {
+				this->label2->Text = L"Status: Stopped";
+				this->button1->Text = L"Start";
+			}
 		}
 	}
 	private: System::Void label2_Click(System::Object^  sender, System::EventArgs^  e) {
 	}
+private: System::Void checkedListBox1_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
+	std::vector<std::string> bank;
+
+	OutputDebugString((LPCWSTR)std::to_string(this->checkedListBox1->CheckedItems->Count).c_str());
+	OutputDebugString((LPCWSTR)"\n");
+
+	for (int i = 0; i < this->checkedListBox1->CheckedItems->Count; i++)
+	{
+		std::string selection = msclr::interop::marshal_as<std::string>(this->checkedListBox1->CheckedItems[i]->ToString());
+		bank.push_back(selection);
+	}
+
+	if (bank.size() > 0) {
+		sts.think(bank);
+	}
+}
+private: System::Void textBox1_TextChanged(System::Object^  sender, System::EventArgs^  e) {
+	std::string num = msclr::interop::marshal_as<std::string>(this->textBox1->Text);
+	if (!is_number(num)) {
+		return;
+	}
+
+	double timer = std::stod(num.c_str());
+
+	sts.think2(timer);
+}
 };
 }

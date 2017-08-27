@@ -7,6 +7,8 @@
 #include <cctype>
 #include "Utilities.h"
 #include "MyForm.h"
+#include <sstream>
+#include <string>
 
 #pragma comment(lib, "User32.lib")
 
@@ -24,7 +26,24 @@ void printDBG(std::string msg)
 void printDBG(int num) { printDBG(std::to_string(num)); }
 void printDBG(double num) { printDBG(std::to_string(num)); }
 
-double glbl;
+public ref class SystemThreadSucks
+{
+public:
+	double glbl = 1;
+	void start(Thread^ myThread);
+	void stop(Thread^ myThread);
+	void think(std::vector<std::string> stuff);
+	void think2(double stuff);
+	bool WeaponListNotEmpty();
+};
+
+void SystemThreadSucks::think2(double stuff)
+{
+	this->glbl = stuff;
+}
+
+double timee;
+bool stopp = false;
 std::vector<std::string> enableweapons;
 void changeweapon()
 {
@@ -60,17 +79,20 @@ void changeweapon()
 			ReadProcessMemory(hprocess, (LPVOID*)(RWeapon + primaryrightweb_offset1), &RWeapon, sizeof(RWeapon), NULL);
 
 			while (true) {
+				if (stopp) { break; }
+
 				Weapon = Utils::Weaponsfcs(enableweapons);
 
 				WriteProcessMemory(hprocess, (LPVOID*)(RWeapon + primaryrightweb_offset2), &Weapon, sizeof(Weapon), NULL);
 
-				Sleep((DWORD)(glbl * 1000));
+				Sleep((DWORD)(timee * 1000));
 			}
 
 			goto error;
 		}
 	}
 
+	return;
 	// Errors come here, add error handling
 error_processid:
 	::MessageBox(0, L"Failed to open process, are you running this as admin?", L"DS3 Random Weapon mod", MB_ICONERROR);
@@ -98,21 +120,22 @@ bool is_number(const std::string& s)
 		s.end(), [](char c) { return !std::isdigit(c); }) == s.end();
 }
 
-public ref class SystemThreadSucks
-{
-public:
-	static void start(Thread^ myThread, double timer, std::vector<std::string> stuff);
-	static void stop(Thread^ myThread);
-};
-
 void SystemThreadSucks::stop(Thread^ myThread)
 {
-	if (myThread && myThread->IsAlive == TRUE) {
-		myThread->Abort();
+	if (myThread) {
+		while (myThread->ThreadState != ThreadState::Stopped) {
+			stopp = true;
+		}
+		stopp = false;
 	}
 }
 
-void SystemThreadSucks::start(Thread^ myThread, double timer, std::vector<std::string> stuff)
+bool SystemThreadSucks::WeaponListNotEmpty()
+{
+	return (enableweapons.size() > 0);
+}
+
+void SystemThreadSucks::think(std::vector<std::string> stuff)
 {
 	enableweapons.clear();
 
@@ -334,11 +357,13 @@ void SystemThreadSucks::start(Thread^ myThread, double timer, std::vector<std::s
 			merge(enableweapons, StandardShields_Hollow);
 		}
 	}
+}
 
-	glbl = timer;
-
+void SystemThreadSucks::start(Thread^ myThread)
+{
 	SystemThreadSucks::stop(myThread);
 
+	timee = this->glbl;
 	myThread = gcnew Thread(gcnew ThreadStart(changeweapon));
 	myThread->IsBackground = true;
 	myThread->Start();
