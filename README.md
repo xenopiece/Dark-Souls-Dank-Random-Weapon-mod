@@ -9,7 +9,7 @@ The weapon icon won't change when the weapon changes (Update for that coming at 
 
 Video here: https://www.youtube.com/watch?v=tKMIhSzeIkk <br />
 
-Download Link (GUI Version): https://mega.nz/#!JZg2wSJI!Nj-8bgIJQAjEKPPgtgejE9lv6AU0-j18Lsxbzisj3G0<br>
+Download Link (GUI Version): https://mega.nz/#!VYZ0nK6T!_OZAghwtjZHBXgxCDSR8mwMAomX3ZYiKiJDtRS-ZuUg<br>
 The newest version is the one with global hotkey<br>
 
 How To Use Gui Version
