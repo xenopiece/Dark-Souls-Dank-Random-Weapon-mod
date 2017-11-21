@@ -1,4 +1,4 @@
-# Dark Souls Dank Random Weapon mod
+# Dark Souls Dank Random Weapon mod REMASTEREDEEEEEEEEDDDEDDDED
 This is a Random Weapon mod for Dark Souls III<br />
 
 You can customize the timer (in seconds) for when it switches weapon<br />
@@ -7,9 +7,9 @@ Weapons have random upgrade level.<br />
 
 The weapon icon won't change when the weapon changes (Update for that coming at some point, waiting for mr. nice shoes)<br />
 
-Video here: https://www.youtube.com/watch?v=tKMIhSzeIkk <br />
+Old Video here: https://www.youtube.com/watch?v=tKMIhSzeIkk <br />
 
-Download Link (GUI Version): https://mega.nz/#!VYZ0nK6T!_OZAghwtjZHBXgxCDSR8mwMAomX3ZYiKiJDtRS-ZuUg<br>
+Download Link (GUI Version): https://mega.nz/#!0BAiiRRI!HqYff0ap3vhQqLluMNUWOLZBu0uoiRxCZPBt839jp7Y<br>
 The newest version is the one with global hotkey<br>
 
 How To Use Gui Version
@@ -20,9 +20,7 @@ How To Use Gui Version
 5. You can press ALT+X globally to start and stop the program
 if status Shows Bob Ross there was an error
 
-The terminal version was removed because it was horribly outdated, might add it back.
 
-VirusTotal scan link: https://www.virustotal.com/en/file/f493c3327ad995f1e5c347436dba160eea93316aee6cca1742a5f6ce519edfe2/analysis/1484339479/<br />
 
 <br />Thanks to phokz and other people for making this: http://forum.cheatengine.org/viewtopic.php?t=589191 amazing cheat engine table for Dark Souls 3 which helped out alot, they all have nice shoes. <br />
 

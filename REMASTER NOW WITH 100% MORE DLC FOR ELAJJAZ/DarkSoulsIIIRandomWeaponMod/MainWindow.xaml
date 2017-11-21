@@ -1,0 +1,166 @@
+﻿<Window x:Class="DarkSoulsIIIRandomWeaponMod.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DarkSoulsIIIRandomWeaponMod"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="459" Width="517" Closing="Closingg">
+    <Grid Background="LightGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid
+            Grid.Column="0">
+            <ListBox
+                x:Name="Box"
+                Background="LightGray"
+                Grid.RowSpan="8">
+                <ListBoxItem>
+                    <CheckBox
+                        x:Name="StandWeap"
+                        Content="Standr Weapon (daggers,swords,etc)" Click="StandWeap_Checked" />
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox
+                        x:Name="Bows"
+                        Content="Bows" Click="Bows_Checked" />
+                </ListBoxItem>
+                <ListBoxItem >
+                    <CheckBox
+                        x:Name="Whips"
+                        Content="Whips" Click="ListBoxItem_Selected"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox
+                        x:Name="Shields"
+                        Content="Shields" Click="Shields_Checked" />
+                </ListBoxItem>
+                <ListBoxItem>
+                        <CheckBox
+                            x:Name="Secret"
+                            Content="SECRET" Click="Secret_Checked" />
+                    </ListBoxItem>
+                    <ListBoxItem>
+                        <CheckBox
+                            x:Name="Heavy_infusions"
+                            Content="Heavy infusions" Click="ListBoxItem_Selected_2" />
+                    </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox
+                        x:Name="Sharp_infusions"
+                        Content="Sharp infusions" Click="ListBoxItem_Selected_3"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox
+                        x:Name="Refined_infusions"
+                        Content="Refined infusions" Click="ListBoxItem_Selected_4"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox
+                        x:Name="Simple_infusions"
+                        Content="Simple infusions" Click="ListBoxItem_Selected_5"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox
+                        x:Name="Crystal_infusions"
+                        Content="Crystal infusions" Click="ListBoxItem_Selected_6"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox
+                        x:Name="Fire_infusions"
+                        Content="Fire infusions" Click="ListBoxItem_Selected_7"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox
+                        x:Name="Chaos_infusions"
+                        Content="Chaos infusions" Click="ListBoxItem_Selected_8"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox
+                        x:Name="Lightning_infusions"
+                        Content="Lightning infusions" Click="ListBoxItem_Selected_9"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox
+                        x:Name="Deep_infusions"
+                        Content="Deep infusions" Click="ListBoxItem_Selected_10"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox
+                        x:Name="Dark_infusions"
+                        Content="Dark infusions" Click="ListBoxItem_Selected_11"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox
+                        x:Name="Poison_infusions"
+                        Content="Poison infusions" Click="ListBoxItem_Selected_12"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox
+                        x:Name="Blood_infusions"
+                        Content="Blood infusions" Click="ListBoxItem_Selected_13"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox
+                        x:Name="Raw_infusions"
+                        Content="Raw infusions" Click="ListBoxItem_Selected_14"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox
+                        x:Name="Blessed_infusions"
+                        Content="Blessed infusions" Click="ListBoxItem_Selected_15"/>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <CheckBox
+                        x:Name="Hollow_infusions"
+                        Content="Hollow infusions" Click="ListBoxItem_Selected_16"/>
+                </ListBoxItem>
+            </ListBox>
+        </Grid>
+        <Grid
+            Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*" />
+                <RowDefinition
+                    Height="0.1*" />
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition
+                    Height="0.1*" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid
+                Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Label
+                    Content="Timer (seconds):" />
+                <TextBox
+                    x:Name="timer"
+                    Grid.Column="1"
+                    Text="1"
+                    Margin="9,1,9,1" TextChanged="timer_TextChanged" />
+            </Grid>
+            <Label
+                x:Name="Status"
+                Content="Status: UNKNOWN"
+                Grid.Row="1" />
+            <Label
+                Grid.Row="2"
+                Content="ALT+X starts and stops the program globally" />
+            <Label
+                Grid.Row="3"
+                x:Name="Usable"
+                Content="Usable: " MouseDown="testt" />
+            <Button
+                x:Name="Start"
+                Grid.Row="4"
+                Content="Start"
+                Click="Start_Click" />
+        </Grid>
+
+    </Grid>
+</Window>
